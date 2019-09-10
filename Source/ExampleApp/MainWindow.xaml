@@ -5,8 +5,60 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExampleApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+				Title="String Explorer"
+				Height="800"
+				Width="1000"
+				FontSize="24"
+				WindowState='Maximized' >
+	<DockPanel x:Name='MainPanel'
+						 Background="#FFECF7FF"
+						 LastChildFill="True" Margin='6'>
+
+	<StackPanel Orientation="Horizontal"
+							DockPanel.Dock="Bottom"
+							HorizontalAlignment="Center">
+		<Button x:Name="ButtonA"
+						Content="Button A"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Top"
+						MinWidth="145"
+						Margin="20"
+						Padding='6' />
+		<Button x:Name="ButtonB"
+						Content="Button B"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Top"
+						MinWidth="145"
+						Margin="20"
+						Padding='6' />
+		<Button x:Name="ClearButton"
+						Content="Clear"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Top"
+						MinWidth="145"
+						Padding='6'
+						Margin="20" />
+	</StackPanel>
+	<StackPanel Orientation='Horizontal'
+							DockPanel.Dock="Top"
+							HorizontalAlignment='Stretch'
+							Margin="40,5">
+		<TextBlock Text='Enter data:' />
+		<TextBox x:Name="InputTextBox"
+						 HorizontalAlignment="Stretch"
+						 MinWidth='400'
+						 Margin='10,0'
+						 Text="1415"
+						 VerticalAlignment="Stretch" />
+	</StackPanel>
+		<TextBox x:Name="OutputTextBox"
+					 HorizontalAlignment="Stretch"
+					 Margin="40,10"
+					 TextWrapping="Wrap"
+					 Text=""
+					 VerticalAlignment="Stretch"
+					 IsReadOnly="True"
+					 DockPanel.Dock="Top"
+					 VerticalScrollBarVisibility='Visible' />
+	</DockPanel>
 </Window>
