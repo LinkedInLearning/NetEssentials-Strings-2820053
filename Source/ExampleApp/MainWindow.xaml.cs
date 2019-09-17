@@ -24,5 +24,18 @@ namespace ExampleApp
 		{
 			InitializeComponent();
 		}
+
+		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+			// declare a string variable with the .NET class
+
+
+			// declare a string variable with the C# keyword
+
+		
+			
+			// the string is a reference type, which is set to null if not initialized
+
+
+		}
 	}
 }

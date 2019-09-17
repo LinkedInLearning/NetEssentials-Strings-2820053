@@ -23,7 +23,8 @@
 						VerticalAlignment="Top"
 						MinWidth="145"
 						Margin="20"
-						Padding='6' />
+						Padding='6'
+							Click='ButtonA_Click' />
 		<Button x:Name="ButtonB"
 						Content="Button B"
 						HorizontalAlignment="Center"
