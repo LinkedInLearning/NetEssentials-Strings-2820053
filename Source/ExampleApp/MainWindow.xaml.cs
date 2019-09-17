@@ -27,7 +27,7 @@ namespace ExampleApp
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e)
 		{
-			string s1, s2, s3 , s4;
+			string s1, s2, s3, s4;
 
 		
 
