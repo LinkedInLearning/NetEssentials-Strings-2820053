@@ -15,12 +15,8 @@ namespace ExampleApp
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
 			// declare a string variable with the .NET class
 
-			System.String s1;
+	
 			// declare a string variable with the C# keyword
-
-		
-			
-		
 
 
 		}
