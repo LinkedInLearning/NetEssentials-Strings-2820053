@@ -33,9 +33,17 @@ namespace ExampleApp
 
 		
 			
-			// the string is a reference type, which is set to null if not initialized
+		
 
 
+		}
+
+		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+			// the string is a reference type, which defaults to a null reference if not initialized
+
+			string s;
+		
+			// int currentLength = s.Length;
 		}
 	}
 }
