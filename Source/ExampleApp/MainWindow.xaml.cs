@@ -15,11 +15,12 @@ namespace ExampleApp
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
 			// declare a string variable with the .NET class
-		
 
-	
+			System.String s1;
+			String s2;
+
 			// declare a string variable with the C# keyword
-
+			string s3;
 
 		}
 
@@ -27,8 +28,8 @@ namespace ExampleApp
 			// the string is a reference type, which defaults to a null reference if not initialized
 
 			string s;
-		
-			// int currentLength = s.Length;
+			s = null;
+			int currentLength = s.Length;
 		}
 	}
 }
