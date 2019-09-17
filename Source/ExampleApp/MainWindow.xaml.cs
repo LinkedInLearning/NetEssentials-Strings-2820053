@@ -34,7 +34,7 @@ namespace ExampleApp
 		}
 
 		private string GetTourName()
-		{;
+		{
 			return "Museum Tour";
 		}
 	}
