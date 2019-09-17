@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace ExampleApp
 {
@@ -14,6 +15,7 @@ namespace ExampleApp
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
 			// declare a string variable with the .NET class
+		
 
 	
 			// declare a string variable with the C# keyword
