@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,8 +37,9 @@ namespace ExampleApp
 
 			// declare a new string variable to hold the uppercase string
 			var s2 = s1.ToUpper();
+			s1 = s1.ToUpper();
 
-			
+
 		}
 
 		private void ButtonB_Click(object sender, RoutedEventArgs e)
@@ -47,6 +49,7 @@ namespace ExampleApp
 			var dice2 = dice1; // both variables refer to the same object
 
 			dice2.PipCount = 14;
+
 		}
 
 		private void ButtonC_Click(object sender, RoutedEventArgs e)
@@ -56,13 +59,23 @@ namespace ExampleApp
 
 			s2 = "goodbye";
 
-			//  what is the current values of s1 and s2?
 
-			var combinedString = s1 + s2;
+		}
+
+		private void ButtonD_Click(object sender, RoutedEventArgs e)
+		{
+			// where this can be misunderstood
+			// is assigning back to the same variable.
+
+			var s1 = " Our award winning cooks have crafted signature dishes. Sign up for our cooks table tour. ";
+
+			s1 = s1.Trim().Replace("cooks", "chefs").Replace(".", "!");
 		}
 	}
 	public class Dice
 	{
 		public int PipCount { get; set; }
+
 	}
+
 }

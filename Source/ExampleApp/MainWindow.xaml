@@ -7,7 +7,7 @@
 				mc:Ignorable="d"
 				Title="String Explorer"
 				Height="800"
-				Width="1000"
+				Width="1100"
 				FontSize="24"
 				WindowState='Maximized'>
 	<Window.Resources>
@@ -41,6 +41,9 @@
 			<Button x:Name="ButtonC"
 							Content="String Variable"
 							Click='ButtonC_Click' />
+			<Button x:Name="ButtonD"
+							Content="On same variable"
+							Click='ButtonD_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear" />
 
