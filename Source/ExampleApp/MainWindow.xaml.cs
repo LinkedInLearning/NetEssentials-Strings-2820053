@@ -27,9 +27,12 @@ namespace ExampleApp
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e)
 		{
-			string s1, s2, s3, s4 , s5;
+			string s1, s2, s3, s5;
 
-			
+			s1 = "";
+			s2 = String.Empty;
+			s3 = "hello";
+			var s4 = GetTourName();
 
 		}
 
