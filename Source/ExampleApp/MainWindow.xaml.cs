@@ -30,9 +30,6 @@ namespace ExampleApp
 			// Chars in .NET are 16-bit Unicode code values
 			// A string consists of zero or more Chars
 			// Internally the text is stored as a sequential read-only collection of Char objects.
-
-
-
 			
 			// A Char represents a single UNICODE character
 			// https://unicode-table.com/en/
