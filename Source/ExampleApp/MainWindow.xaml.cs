@@ -24,5 +24,23 @@ namespace ExampleApp
 		{
 			InitializeComponent();
 		}
+
+		private void ButtonA_Click(object sender, RoutedEventArgs e)
+		{
+			// Chars in .NET are 16-bit Unicode code values
+			// A string consists of zero or more Chars
+			// Internally the text is stored as a sequential read-only collection of Char objects.
+
+
+
+			
+			// A Char represents a single UNICODE character
+			// https://unicode-table.com/en/
+
+			Char c1, c2, c3, c4, c5;
+
+
+
+		}
 	}
 }
