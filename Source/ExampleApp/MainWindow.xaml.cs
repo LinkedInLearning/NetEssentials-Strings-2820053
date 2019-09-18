@@ -36,8 +36,11 @@ namespace ExampleApp
 
 			Char c1, c2, c3, c4, c5;
 
+			c1 = 'a';
+			c2 = 'ㆄ';
 
-
+			c3 = '\u2708';
+			c4 = '\u315E';
 		}
 	}
 }
