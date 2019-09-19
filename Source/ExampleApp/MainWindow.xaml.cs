@@ -69,6 +69,14 @@ namespace ExampleApp
 			OutputTextBox.Text = s4;
 		}
 
+	
+
+		private void ButtonE_Click(object sender, RoutedEventArgs e) {
+			// \u to inject unicode into string
+			var s5 = "Add any Unicode code point:\v\u2600 \u2614 \u2615 \u273F \r\n\u2600 \u2614 \u2615 \u273F ";
+			OutputTextBox.Text = s5;
+		}
+
 		private void ClearButton_Click(object sender, RoutedEventArgs e) {
 			OutputTextBox.Text = string.Empty;
 		}

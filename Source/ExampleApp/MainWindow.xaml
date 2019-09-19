@@ -19,9 +19,9 @@
 			<Setter Property='MinWidth'
 							Value='145' />
 			<Setter Property='Margin'
-							Value='20' />
+							Value='16' />
 			<Setter Property='Padding'
-							Value='6' />
+							Value='3' />
 		</Style>
 	</Window.Resources>
 	<DockPanel x:Name='MainPanel'
@@ -44,6 +44,9 @@
 			<Button x:Name="ButtonD"
 							Content="File Path"
 							Click='ButtonD_Click' />
+			<Button x:Name="ButtonE"
+							Content="Unicode"
+							Click='ButtonE_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />
