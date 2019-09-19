@@ -24,5 +24,25 @@ namespace ExampleApp
 		{
 			InitializeComponent();
 		}
+
+		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+			char c1;
+
+			string letters = "abcdefghijklmnopqrstuvwxyz";
+
+			c1 = letters[0];
+			c1 = letters[letters.Length - 1];
+			if (letters.Contains(c1)
+			{
+
+			}
+		}
+
+		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+			//char c1 = "5";
+
+			//string letters = "abcdefghijklmnopqrstuvwxyz";
+			//letters[0] = c1;
+		}
 	}
 }
