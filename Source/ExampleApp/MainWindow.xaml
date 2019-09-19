@@ -37,7 +37,8 @@
 			<Button x:Name="ButtonB"
 							Content="Button B" />
 			<Button x:Name="ClearButton"
-							Content="Clear" />
+							Content="Clear"
+							Click='ClearButton_Click' />
 		</StackPanel>
 		<StackPanel Orientation='Horizontal'
 								DockPanel.Dock="Top"

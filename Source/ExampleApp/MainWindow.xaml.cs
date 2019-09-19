@@ -24,5 +24,9 @@ namespace ExampleApp
 		{
 			InitializeComponent();
 		}
+
+		private void ClearButton_Click(object sender, RoutedEventArgs e) {
+			OutputTextBox.Text = string.Empty;
+		}
 	}
 }
