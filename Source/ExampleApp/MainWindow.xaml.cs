@@ -25,8 +25,38 @@ namespace ExampleApp
 			InitializeComponent();
 		}
 
+	
+		
+
+
+		//	https://docs.microsoft.com/en-us/dotnet/api/system.char.ispunctuation?view=netframework-4.8
+	
+	private void ButtonA_Click(object sender, RoutedEventArgs e) {
+			Char c1 = '.';
+		// use the Char methods to test for Unicode categories.
+		
+		if (Char.IsPunctuation(c1))
+		{
+			// determine if this char is considered a punctuation
+			// by the Unicode Standards.
+		}
+		
+		}
+
+
 		private void ClearButton_Click(object sender, RoutedEventArgs e) {
 			OutputTextBox.Text = string.Empty;
+		}
+
+	
+
+		private void InputTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e) {
+			Char currentChar = e.Text[0];
+
+			if (Char.IsDigit(currentChar))
+			{
+				e.Handled = true;
+			}
 		}
 	}
 }

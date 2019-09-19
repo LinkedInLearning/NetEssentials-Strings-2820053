@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApp", "ExampleApp\ExampleApp.csproj", "{2543B8BD-39B2-4058-957D-EC319981A069}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WhatIs", "WhatIs", "{494C75D9-CD8B-4CCD-958F-3A8E271EBF56}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CharMembers", "CharMembers", "{494C75D9-CD8B-4CCD-958F-3A8E271EBF56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
