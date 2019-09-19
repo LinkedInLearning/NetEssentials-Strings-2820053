@@ -30,28 +30,24 @@ namespace ExampleApp
 
 			string letters = "abc-def-ghi-jkl-mno-pqr-stu-vwx-yz";
 
-			c1 = letters[0];
-			c1 = letters[letters.Length - 1];
-		
+
+
 		}
 
 		private void ButtonB_Click(object sender, RoutedEventArgs e) {
-			//char c1 = "5";
+			//char c2 = "5";
 
 			//string letters = "abc-def-ghi-jkl-mno-pqr-stu-vwx-yz";
-			//letters[0] = c1;
+			//letters[0] = c2;
 		}
 
 		private void ButtonC_Click(object sender, RoutedEventArgs e) {
 			// determine if a char exists within string
-			char c1 = 'm';
+			char c3 = 'm';
 			char resultChar;
 
 			string letters = "abc-def-ghi-jkl-mno-pqr-stu-vwx-yz";
-			if (letters.Contains(c1))
-			{
-				resultChar = letters[letters.IndexOf(c1)];
-			}
+			
 		}
 	}
 }
