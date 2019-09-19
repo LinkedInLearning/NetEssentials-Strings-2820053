@@ -33,11 +33,17 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Button A" />
+							Content="Constructor 1"
+							Click='ButtonA_Click' />
 			<Button x:Name="ButtonB"
-							Content="Button B" />
+							Content="Constructor 2"
+							Click='ButtonB_Click' />
+			<Button x:Name="ButtonC"
+							Content="Constructor 3"
+							Click='ButtonC_Click' />
 			<Button x:Name="ClearButton"
-							Content="Clear" />
+							Content="Clear"
+							Click='ClearButton_Click' />
 		</StackPanel>
 		<StackPanel Orientation='Horizontal'
 								DockPanel.Dock="Top"
