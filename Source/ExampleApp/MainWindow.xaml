@@ -40,7 +40,7 @@
 							Click='ButtonB_Click' />
 			<Button x:Name="ButtonC"
 							Content="Button C"
-						 />
+							Click='ButtonC_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear" />
 		</StackPanel>

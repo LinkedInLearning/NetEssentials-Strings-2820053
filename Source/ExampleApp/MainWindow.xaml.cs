@@ -28,21 +28,30 @@ namespace ExampleApp
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
 			char c1;
 
-			string letters = "abcdefghijklmnopqrstuvwxyz";
+			string letters = "abc-def-ghi-jkl-mno-pqr-stu-vwx-yz";
 
 			c1 = letters[0];
 			c1 = letters[letters.Length - 1];
-			if (letters.Contains(c1)
-			{
-
-			}
+		
 		}
 
 		private void ButtonB_Click(object sender, RoutedEventArgs e) {
 			//char c1 = "5";
 
-			//string letters = "abcdefghijklmnopqrstuvwxyz";
+			//string letters = "abc-def-ghi-jkl-mno-pqr-stu-vwx-yz";
 			//letters[0] = c1;
+		}
+
+		private void ButtonC_Click(object sender, RoutedEventArgs e) {
+			// determine if a char exists within string
+			char c1 = 'm';
+			char resultChar;
+
+			string letters = "abc-def-ghi-jkl-mno-pqr-stu-vwx-yz";
+			if (letters.Contains(c1))
+			{
+				resultChar = letters[letters.IndexOf(c1)];
+			}
 		}
 	}
 }
