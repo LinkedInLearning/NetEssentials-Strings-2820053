@@ -30,7 +30,8 @@ namespace ExampleApp
 
 			string letters = "abc-def-ghi-jkl-mno-pqr-stu-vwx-yz";
 
-
+			c1 = letters[0];
+			c1 = letters[letters.Length -1];
 
 		}
 
@@ -47,7 +48,12 @@ namespace ExampleApp
 			char resultChar;
 
 			string letters = "abc-def-ghi-jkl-mno-pqr-stu-vwx-yz";
-			
+
+			if (letters.Contains(c3))
+			{
+				var index = letters.IndexOf(c3);
+				resultChar = letters[index];
+			}
 		}
 	}
 }
