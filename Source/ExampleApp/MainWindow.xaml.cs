@@ -25,6 +25,50 @@ namespace ExampleApp
 			InitializeComponent();
 		}
 
+		
+
+		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+			// Escape sequences represent non-printable and special characters in literal strings. 
+			// Originally used to send commands to hardware devices like printers and display terminal
+			// They are still useful for embedded tabs, line feed and similar into the string
+
+			// use the \ to indicate the start of the escape sequence.
+
+			// \', \", \\
+
+			var s1 = "The customer said, \"I want a refund\".";
+			OutputTextBox.Text = s1;
+
+		
+
+		}
+
+
+		
+
+		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+			// \r carriage return, \n new line
+			var s2 = "The first line.\r\nThe second line";
+			OutputTextBox.Text = s2;
+		}
+
+		
+
+		private void ButtonC_Click(object sender, RoutedEventArgs e) {
+			// \t horizontal tab, \v vertical tab
+			var s3 = "aaa\t\bbb\tccc\vddd\teee\tfff\a";
+			OutputTextBox.Text = s3;
+		}
+
+	
+
+		private void ButtonD_Click(object sender, RoutedEventArgs e) {
+			//	\\ Backslash used for file path
+			var s4 = "C:\\users\\walt\\documents";
+
+			OutputTextBox.Text = s4;
+		}
+
 		private void ClearButton_Click(object sender, RoutedEventArgs e) {
 			OutputTextBox.Text = string.Empty;
 		}
