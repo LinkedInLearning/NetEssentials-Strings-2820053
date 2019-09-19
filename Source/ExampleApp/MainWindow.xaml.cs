@@ -30,7 +30,9 @@ namespace ExampleApp
 
 			// use string constructors
 			string s1 = String.Empty;
-
+			string s2 = "";
+			string s3 = "pear";
+		
 			OutputTextBox.Text = s1;
 		}
 
