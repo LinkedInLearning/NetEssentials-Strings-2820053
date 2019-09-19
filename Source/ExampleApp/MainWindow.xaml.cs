@@ -47,7 +47,7 @@ namespace ExampleApp
 		//	https://docs.microsoft.com/en-us/dotnet/api/system.char.ispunctuation?view=netframework-4.8
 		private void ButtonB_Click(object sender, RoutedEventArgs e)
 		{
-			Char c1 = '.';
+			Char c1 = '?';
 			// use the Char methods to test for Unicode categories.
 
 			if (true)
