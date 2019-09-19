@@ -50,10 +50,15 @@ namespace ExampleApp
 			Char c1 = '.';
 			// use the Char methods to test for Unicode categories.
 
-			if (true)
+			if (Char.IsPunctuation(c1))
 			{
 				// determine if this char is considered a punctuation
 				// by the Unicode Standards.
+				OutputTextBox.Text = "Is punctuation";
+			}
+			else
+			{
+				OutputTextBox.Text = "Is not punctuation";
 			}
 		}
 
