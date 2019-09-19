@@ -50,7 +50,7 @@ namespace ExampleApp
 			Char c1 = '.';
 			// use the Char methods to test for Unicode categories.
 
-			if (Char.IsPunctuation(c1))
+			if (true)
 			{
 				// determine if this char is considered a punctuation
 				// by the Unicode Standards.
