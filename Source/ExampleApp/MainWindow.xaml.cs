@@ -26,9 +26,12 @@ namespace ExampleApp
 		}
 
 
-		private void ButtonA_Click(object sender, RoutedEventArgs e) {
-			// There is no runtime difference between a string and verbatim string. 
-			// The C# compiler modifies verbatim strings, performing extra operations 
+		private void ButtonA_Click(object sender, RoutedEventArgs e)
+		{
+			// There is no runtime difference between 
+			// a string literal and verbatim string. 
+			// The C# compiler modifies verbatim strings, performing extra operations
+			// when it encounters an escape sequence in the verbatim literal
 
 			string s1;
 
@@ -36,28 +39,26 @@ namespace ExampleApp
 			OutputTextBox.Text = s1;
 		}
 
-
-		private void ClearButton_Click(object sender, RoutedEventArgs e) {
-			OutputTextBox.Text = string.Empty;
-		}
-
-		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+		private void ButtonB_Click(object sender, RoutedEventArgs e)
+		{
 			string s2;
 
 			s2 = @"A file path\vC:\\Windows\\Users";
 			OutputTextBox.Text = s2;
 		}
 
-		private void ButtonC_Click(object sender, RoutedEventArgs e) {
+		private void ButtonC_Click(object sender, RoutedEventArgs e)
+		{
 			string s3, s4;
-			
+
 			s3 = "aa\tbb\tcc";
 			// the C# compiler changes \t to \\t in the verbatim string
-			s4 = @"aa\tbb\tcc"; 
-			OutputTextBox.Text = s3;
+			s4 = @"aa\tbb\tcc";
+			OutputTextBox.Text = s4;
 		}
 
-		private void ButtonD_Click(object sender, RoutedEventArgs e) {
+		private void ButtonD_Click(object sender, RoutedEventArgs e)
+		{
 
 			string s5;
 			// the C# compiler adds \r\n for each newline in the verbatim string
@@ -66,6 +67,10 @@ namespace ExampleApp
              Where price >23
              Order By Price";
 			OutputTextBox.Text = s5;
+		}
+		private void ClearButton_Click(object sender, RoutedEventArgs e)
+		{
+			OutputTextBox.Text = string.Empty;
 		}
 	}
 }
