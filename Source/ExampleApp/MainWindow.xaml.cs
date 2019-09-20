@@ -25,24 +25,25 @@ namespace ExampleApp
 			InitializeComponent();
 		}
 
-		
 
-		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+
+		private void ButtonA_Click(object sender, RoutedEventArgs e)
+		{
 			// syntax for string literal
 
 			string s1, s2, s3, s4;
 
-			s1 = "hello"; // string literal
-			s2 = @"hello"; // verbatim string literal
-			s3 = $"hello"; // interpolated string literal
+		 // string literal
+		 // verbatim string literal
+		 // interpolated string literal
 
-			s4 = @"Select productName, Price
-						from Products
-						where Price > 21";
+			s4 = @"Select productName, Price from Products where Price > 21";
 
+			
 		}
 
-		private void ClearButton_Click(object sender, RoutedEventArgs e) {
+		private void ClearButton_Click(object sender, RoutedEventArgs e)
+		{
 			OutputTextBox.Text = string.Empty;
 		}
 	}
