@@ -44,7 +44,7 @@ namespace ExampleApp
 			string outputString = string.Empty;
 			double num1 = 24.75;
 
-			outputString = String.Format("{0}", num1);
+			outputString = String.Format("{0:C}", num1);
 			OutputTextBox.Text = outputString;
 		}
 
@@ -62,7 +62,7 @@ namespace ExampleApp
 
 			string header = "Format these numbers as percent: ";
 			string combo = string.Empty;
-			combo = String.Format("{0}{1}, {2}", header, num1, num2);
+			combo = String.Format("{0}{1:P}, {2:P}", header, num1, num2);
 
 			OutputTextBox.Text = combo;
 		}
@@ -78,7 +78,7 @@ namespace ExampleApp
 
 			string combo = string.Empty;
 
-			combo = String.Format("{0}{1}{2}", first, florette, second);
+			combo = String.Format("{2}{1}{0}", first, florette, second);
 			OutputTextBox.Text = combo;
 		}
 	}
