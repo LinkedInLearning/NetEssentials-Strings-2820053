@@ -39,8 +39,11 @@
 							Content="Multiple Arguments"
 							Click='ButtonB_Click' />
 			<Button x:Name="ButtonC"
-							Content="Combine Strings"
+							Content="Multiple Arguments and Params"
 							Click='ButtonC_Click' />
+			<Button x:Name="ButtonD"
+							Content="Combine Strings"
+							Click='ButtonD_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />

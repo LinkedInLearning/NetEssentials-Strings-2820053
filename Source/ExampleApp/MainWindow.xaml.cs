@@ -25,11 +25,13 @@ namespace ExampleApp
 			InitializeComponent();
 		}
 
-		private void ClearButton_Click(object sender, RoutedEventArgs e) {
+		private void ClearButton_Click(object sender, RoutedEventArgs e)
+		{
 			OutputTextBox.Text = string.Empty;
 		}
 
-		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+		private void ButtonA_Click(object sender, RoutedEventArgs e)
+		{
 
 			// Use String.Format if you need to insert the value 
 			// of an object, variable, or expression into another string.
@@ -46,7 +48,15 @@ namespace ExampleApp
 			OutputTextBox.Text = outputString;
 		}
 
-		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+		private void ButtonB_Click(object sender, RoutedEventArgs e)
+		{
+			string outputString = string.Empty;
+			outputString = String.Format("-- {0} -- {0} -- {0} --", "𝄞");
+			OutputTextBox.Text = outputString;
+		}
+
+		private void ButtonC_Click(object sender, RoutedEventArgs e)
+		{
 			double num1 = .12;
 			double num2 = .15;
 
@@ -57,7 +67,8 @@ namespace ExampleApp
 			OutputTextBox.Text = combo;
 		}
 
-		private void ButtonC_Click(object sender, RoutedEventArgs e) {
+		private void ButtonD_Click(object sender, RoutedEventArgs e)
+		{
 			// combine two strings with String methods
 
 			string first = "1. The Banana is yellow.";
