@@ -27,27 +27,24 @@ namespace ExampleApp {
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
 
 			var vscan = new VirusScanService();
-			
-
 			string combo = string.Empty;
-			combo = vscan.CreateReportConcat();
 
+			combo = vscan.CreateReportConcat();
 
 			OutputTextBox.Text = combo;
 		}
 
 		private void ButtonB_Click(object sender, RoutedEventArgs e) {
 			var vscan = new VirusScanService();
-
-
 			string combo = string.Empty;
-			combo = vscan.CreateReport();
 
+			combo = vscan.CreateReport();
 
 			OutputTextBox.Text = combo;
 		}
 
-		private void ClearButton_Click(object sender, RoutedEventArgs e) {
+		private void ClearButton_Click(object sender, RoutedEventArgs e)
+		{
 			OutputTextBox.Text = string.Empty;
 		}
 	}
