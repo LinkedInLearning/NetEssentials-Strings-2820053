@@ -33,11 +33,9 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="String.Concat"
-							Click='ButtonA_Click' />
+							Content="Button A" />
 			<Button x:Name="ButtonB"
-							Content="String.Insert"
-							Click='ButtonB_Click' />
+							Content="Button B" />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />
