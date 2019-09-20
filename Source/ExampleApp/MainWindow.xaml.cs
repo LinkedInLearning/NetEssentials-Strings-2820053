@@ -25,9 +25,7 @@ namespace ExampleApp
 			InitializeComponent();
 		}
 
-		private void ClearButton_Click(object sender, RoutedEventArgs e) {
-			OutputTextBox.Text = string.Empty;
-		}
+		
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
 			// combine two strings with String methods
@@ -39,9 +37,7 @@ namespace ExampleApp
 
 			string combo = string.Empty;
 
-			combo = string.Concat(first, second);
-			combo = string.Concat(first, florette, second);
-			combo = string.Concat(first, florette, second, florette, third);
+			
 			OutputTextBox.Text = combo;
 		}
 
@@ -56,6 +52,11 @@ namespace ExampleApp
 			combo = combo.Insert(0,third).Insert(0,florette).Insert(0,second);
 
 			OutputTextBox.Text = combo;
+		}
+
+		private void ClearButton_Click(object sender, RoutedEventArgs e)
+		{
+			OutputTextBox.Text = string.Empty;
 		}
 	}
 }
