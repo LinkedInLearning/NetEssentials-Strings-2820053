@@ -30,7 +30,7 @@ namespace ExampleApp
 		{
 			// There is no runtime difference between 
 			// a string literal and verbatim string. 
-			// The C# compiler modifies verbatim strings, performing extra operations
+			// The C# compiler perform extra operations and modifies the string
 			// when it encounters an escape sequence in the verbatim literal
 
 			string s1;
