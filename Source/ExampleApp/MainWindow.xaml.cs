@@ -33,9 +33,9 @@ namespace ExampleApp
 
 			string s1, s2, s3, s4;
 
-		 // string literal
-		 // verbatim string literal
-		 // interpolated string literal
+			s1 = "hello"; // string literal
+			s2 = "hello";  // verbatim string literal
+			s3 = "hello";  // interpolated string literal
 
 			s4 = @"Select productName, Price from Products where Price > 21";
 
