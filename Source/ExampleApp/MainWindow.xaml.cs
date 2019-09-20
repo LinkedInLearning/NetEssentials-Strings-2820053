@@ -40,7 +40,7 @@ namespace ExampleApp
 
 			string combo = string.Empty;
 
-			
+			combo = first + florette + second;
 			OutputTextBox.Text = combo;
 		}
 
@@ -55,7 +55,7 @@ namespace ExampleApp
 			string combo = string.Empty;
 
 
-			combo = header + num1 + num2;
+		//	combo = header + num1 + num2;
 			// or
 			combo = header + (num1 + num2);
 			OutputTextBox.Text = combo;
