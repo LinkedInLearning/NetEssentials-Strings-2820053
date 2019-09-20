@@ -13,50 +13,87 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExampleApp
-{
+namespace ExampleApp {
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
-	{
-		public MainWindow()
-		{
+	public partial class MainWindow : Window {
+		public MainWindow() {
 			InitializeComponent();
 		}
 
-		
+
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
-			// combine two strings with String methods
 
-			string first = "1. The Banana is yellow.";
-			string second = "2. The pear is ripe.";
-			string third = "3. A tomato is not a vegetable, it's a fruit!";
-			string florette = " ✿ ";
+			var vscan = new VirusScanService();
+			
 
 			string combo = string.Empty;
+			combo = vscan.CreateReportConcat();
 
-			
+
 			OutputTextBox.Text = combo;
 		}
 
 		private void ButtonB_Click(object sender, RoutedEventArgs e) {
-			string first = "1.The Banana is yellow.";
-			string second = "2.The pear is ripe.";
-			string third = "3. A tomato is not a vegetable, it's a fruit!";
-			string florette = " ✿ ";
+			var vscan = new VirusScanService();
+
 
 			string combo = string.Empty;
+			combo = vscan.CreateReport();
 
-			combo = combo.Insert(0,third).Insert(0,florette).Insert(0,second);
 
 			OutputTextBox.Text = combo;
 		}
 
-		private void ClearButton_Click(object sender, RoutedEventArgs e)
-		{
+		private void ClearButton_Click(object sender, RoutedEventArgs e) {
 			OutputTextBox.Text = string.Empty;
 		}
 	}
+	public class VirusScanService {
+		// simulate dynamic list of files to scan.
+		private Random _ran = new Random();
+		private StringBuilder _builder = new StringBuilder();
+		public string CreateReportConcat() {
+			string result = string.Empty;
+
+			result +="Virus Scan Report\v";
+			result +="-=-=-=-=-=-=-=-=-=-=-=-=-\v";
+			for (int counter = 0; counter < 4000; counter++)
+			{
+				result +=GetFileStatusReport();
+				result +="\v";
+			}
+
+			return result;
+
+		}
+		public string CreateReport() {
+
+			_builder.Clear();
+			_builder.Append("Virus Scan Report\v");
+			_builder.Append("-=-=-=-=-=-=-=-=-=-=-=-=-\v");
+			for (int counter = 0; counter < 400; counter++)
+			{
+				_builder.Append(GetFileStatusReport());
+				_builder.Append ("\v");
+			}
+		
+			return _builder.ToString();
+
+		}
+		private string GetFileStatusReport() {
+	
+			bool virusFound = (_ran.Next(2) == 0);
+			DateTime scanTime = DateTime.Now.AddMinutes(_ran.Next(0, 10));
+		string result = $"File: \t{GetModifiedFileName()} \t\tScanned {scanTime.ToShortTimeString()}  \tVirus Found ({virusFound})";
+			return result;
+		}
+		private string GetModifiedFileName() {
+
+			return System.IO.Path.GetRandomFileName();
+		}
+	}
+	
 }
