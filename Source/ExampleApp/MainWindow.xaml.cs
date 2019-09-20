@@ -40,7 +40,7 @@ namespace ExampleApp
 
 			string combo = string.Empty;
 
-			combo = first + florette + second;
+			
 			OutputTextBox.Text = combo;
 		}
 
