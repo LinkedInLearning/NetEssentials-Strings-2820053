@@ -55,6 +55,7 @@ namespace ExampleApp {
 		// simulate dynamic list of files to scan.
 		private Random _ran = new Random();
 		private StringBuilder _builder = new StringBuilder();
+
 		public string CreateReportConcat() {
 			string result = string.Empty;
 
@@ -70,7 +71,10 @@ namespace ExampleApp {
 
 		}
 		public string CreateReport() {
-
+			if (_builder.Capacity < 200000)
+			{
+				_builder = new StringBuilder(200000);
+			}
 			_builder.Clear();
 			_builder.Append("Virus Scan Report\v");
 			_builder.Append("-=-=-=-=-=-=-=-=-=-=-=-=-\v");
