@@ -30,7 +30,7 @@ namespace ExampleApp
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
 			// string interpolation is similar to String.Format
 			// Improvements over String.Format
-			// 1. Tokens/placeholders available in "", no need to call String.Format()
+			// 1. Tokens/placeholders  are available in the "", no need to call String.Format()
 			// 2. No need to use index values {0}{1}, use expression directly {num1}{num2}
 
 
