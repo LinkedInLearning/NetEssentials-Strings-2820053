@@ -28,30 +28,26 @@ namespace ExampleApp
 		
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
-			// combine two strings with String methods
+			// string interpolation is similar to String.Format
+			// Improvements over String.Format
+			// 1. Tokens/placeholders available in "", no need to call String.Format()
+			// 2. No need to use index values {0}{1}, use expression directly {num1}{num2}
 
-			string first = "1. The Banana is yellow.";
-			string second = "2. The pear is ripe.";
-			string third = "3. A tomato is not a vegetable, it's a fruit!";
-			string florette = " ✿ ";
 
+			double num1 = .12;
+			double num2 = .15;
+
+			string header = "Format these numbers as percent: ";
 			string combo = string.Empty;
+			combo = String.Format("{0}{1:P}, {2:P}", header, num1, num2);
+
+			OutputTextBox.Text = combo;
 
 			
-			OutputTextBox.Text = combo;
 		}
 
 		private void ButtonB_Click(object sender, RoutedEventArgs e) {
-			string first = "1.The Banana is yellow.";
-			string second = "2.The pear is ripe.";
-			string third = "3. A tomato is not a vegetable, it's a fruit!";
-			string florette = " ✿ ";
-
-			string combo = string.Empty;
-
-			combo = combo.Insert(0,third).Insert(0,florette).Insert(0,second);
-
-			OutputTextBox.Text = combo;
+			
 		}
 
 		private void ClearButton_Click(object sender, RoutedEventArgs e)

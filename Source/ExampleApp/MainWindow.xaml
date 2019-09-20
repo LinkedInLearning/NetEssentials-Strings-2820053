@@ -33,10 +33,10 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="String.Concat()"
+							Content="Interpolation 1"
 							Click='ButtonA_Click' />
 			<Button x:Name="ButtonB"
-							Content="String.Insert()"
+							Content="Interpolation 2"
 							Click='ButtonB_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear"
