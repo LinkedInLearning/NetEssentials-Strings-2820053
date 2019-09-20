@@ -28,7 +28,7 @@ namespace ExampleApp
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
 			// There is no runtime difference between a string and verbatim string. 
-			// The C# compiler handles verbatim strings, performing extra operations 
+			// The C# compiler modifies verbatim strings, performing extra operations 
 
 			string s1;
 
@@ -49,13 +49,23 @@ namespace ExampleApp
 		}
 
 		private void ButtonC_Click(object sender, RoutedEventArgs e) {
-			string s3;
+			string s3, s4;
+			
+			s3 = "aa\tbb\tcc";
+			// the C# compiler changes \t to \\t in the verbatim string
+			s4 = @"aa\tbb\tcc"; 
+			OutputTextBox.Text = s3;
+		}
+
+		private void ButtonD_Click(object sender, RoutedEventArgs e) {
+
+			string s5;
 			// the C# compiler adds \r\n for each newline in the verbatim string
-			s3 = @"Select ProductName Price
+			s5 = @"Select ProductName Price
              From Products
              Where price >23
              Order By Price";
-			OutputTextBox.Text = s3;
+			OutputTextBox.Text = s5;
 		}
 	}
 }
