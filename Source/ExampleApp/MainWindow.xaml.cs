@@ -39,21 +39,17 @@ namespace ExampleApp
 
 			string combo = string.Empty;
 
-			combo = string.Concat(first, second);
-			combo = string.Concat(first, florette, second);
-			combo = string.Concat(first, florette, second, florette, third);
+			combo = String.Format("{0}{1}{2}", first, florette, second);
 			OutputTextBox.Text = combo;
 		}
 
 		private void ButtonB_Click(object sender, RoutedEventArgs e) {
-			string first = "1.The Banana is yellow.";
-			string second = "2.The pear is ripe.";
-			string third = "3. A tomato is not a vegetable, it's a fruit!";
-			string florette = " ✿ ";
+			double num1 = .12;
+			double num2 = .15;
 
+			string header = "Format these numbers as percent: ";
 			string combo = string.Empty;
-
-			combo = combo.Insert(0,third).Insert(0,florette).Insert(0,second);
+			combo = String.Format("{0}{1:p}, {2:p}", header, num1, num2);
 
 			OutputTextBox.Text = combo;
 		}
