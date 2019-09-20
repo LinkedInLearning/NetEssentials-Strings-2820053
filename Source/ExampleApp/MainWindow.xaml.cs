@@ -37,7 +37,9 @@ namespace ExampleApp
 
 			string combo = string.Empty;
 
-			
+			combo = String.Concat(first, second);
+			combo = String.Concat(first,florette, second);
+			combo = String.Concat(first, florette, second, florette, third);
 			OutputTextBox.Text = combo;
 		}
 
