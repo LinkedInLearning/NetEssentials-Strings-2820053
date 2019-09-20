@@ -75,7 +75,7 @@ namespace ExampleApp {
 			_builder.Clear();
 			_builder.Append("Virus Scan Report\v");
 			_builder.Append("-=-=-=-=-=-=-=-=-=-=-=-=-\v");
-			for (int counter = 0; counter < 400; counter++)
+			for (int counter = 0; counter < 4000; counter++)
 			{
 				_builder.Append(GetFileStatusReport());
 				_builder.Append ("\v");
