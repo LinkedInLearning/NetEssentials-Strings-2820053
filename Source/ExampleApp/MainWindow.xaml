@@ -33,9 +33,14 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Button A" />
+							Content="Join String Array"
+							Click='ButtonA_Click' />
 			<Button x:Name="ButtonB"
-							Content="Button B" />
+							Content="Join List (string)"
+							Click='ButtonB_Click' />
+			<Button x:Name="ButtonC"
+							Content="Join List (double)"
+							Click='ButtonC_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />

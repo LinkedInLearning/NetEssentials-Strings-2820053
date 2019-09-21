@@ -29,6 +29,29 @@ namespace ExampleApp
 			OutputTextBox.Text = string.Empty;
 		}
 
+		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+		string [] foodArray =  { "banana", "celery", "kiwi", "onion", "potato", "cherry" };
 
+			string foodString = String.Join("--=--", foodArray);
+
+			this.OutputTextBox.Text = foodString;
+
+		}
+
+		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+			List<string> foodList = new List<string>{ "banana", "celery", "kiwi", "onion", "potato", "cherry" };
+
+			string foodString = String.Join("#", foodList);
+
+			this.OutputTextBox.Text = foodString;
+		}
+
+		private void ButtonC_Click(object sender, RoutedEventArgs e) {
+
+			List<double> numbers = new List<double> { 1.5, 2.5, 3.5, 8.5, 7.5, 6.5 };
+
+			string numbersString = String.Join(" + ", numbers);
+			this.OutputTextBox.Text = numbersString;
+		}
 	}
 }
