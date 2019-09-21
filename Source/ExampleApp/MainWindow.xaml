@@ -38,9 +38,6 @@
 			<Button x:Name="ButtonB"
 							Content="Comma"
 							Click='ButtonB_Click' />
-			<Button x:Name="ButtonC"
-							Content="Linq"
-							Click='ButtonC_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />

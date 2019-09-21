@@ -52,29 +52,10 @@ namespace ExampleApp
 			string foodsB = "kiwi, , mushroom, onion, potato, , spinach, tomato";
 
 			string[] comma = { ", " };
-			var foodArrayB = foodsB.Split(comma, StringSplitOptions.RemoveEmptyEntries);
+			var foodArrayB = foodsB.Split(comma, StringSplitOptions.None);
 	
 		}
 
-		private void ButtonC_Click(object sender, RoutedEventArgs e) {
-			string foodsB = "kiwi, lemon, kiwi, onion, potato, lemon, spinach, tomato, lemon";
-			string[] comma = { ", " };
-
-			
-			var foodArrayB = foodsB.Split(comma, StringSplitOptions.RemoveEmptyEntries);
-		
-			var countQuery = foodArrayB.GroupBy(x => x).Select(x => x );
-
-			foreach (var foodItem in countQuery)
-			{
-				OutputTextBox.Text += $"{foodItem.Key}: {foodItem.Count()}\r\n";
-			}
-
-
-			
-			// project your own names is desired.
-
-			//	var countQuery = foodArrayB.GroupBy(x => x).Select(x=> new {FoodName=x.Key,WordCount = x.Count() });
-		}
+	
 	}
 }
