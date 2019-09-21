@@ -71,7 +71,9 @@ namespace ExampleApp
 			}
 
 
+			
 			// project your own names is desired.
+
 			//	var countQuery = foodArrayB.GroupBy(x => x).Select(x=> new {FoodName=x.Key,WordCount = x.Count() });
 		}
 	}
