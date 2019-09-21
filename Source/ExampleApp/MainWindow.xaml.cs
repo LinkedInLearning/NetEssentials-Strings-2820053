@@ -62,13 +62,17 @@ namespace ExampleApp
 
 			
 			var foodArrayB = foodsB.Split(comma, StringSplitOptions.RemoveEmptyEntries);
-			var q = foodArrayB.GroupBy(x => x).Select(x=> new {FoodName=x.Key,WordCount = x.Count() });
+		
+			var countQuery = foodArrayB.GroupBy(x => x).Select(x => x );
 
-			foreach (var item in q)
+			foreach (var foodItem in countQuery)
 			{
-				OutputTextBox.Text += $"{item.FoodName}: {item.WordCount}\r\n";
+				OutputTextBox.Text += $"{foodItem.Key}: {foodItem.Count()}\r\n";
 			}
-			
+
+
+			// project your own names is desired.
+			//	var countQuery = foodArrayB.GroupBy(x => x).Select(x=> new {FoodName=x.Key,WordCount = x.Count() });
 		}
 	}
 }
