@@ -13,15 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExampleApp
-{
+namespace ExampleApp {
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
-	{
-		public MainWindow()
-		{
+	public partial class MainWindow : Window {
+		public MainWindow() {
 			InitializeComponent();
 		}
 
@@ -29,6 +26,20 @@ namespace ExampleApp
 			OutputTextBox.Text = string.Empty;
 		}
 
+		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+			string sample = "   At Roux, our mission is to teach and inspire the next generation’s artists to create work that changes the way people think, and hopefully, even the way they act. We believe art inspires compassion by providing audiences with an empathetic outlet.  ";
 
+
+			string trimmedString  = string.Empty;
+			trimmedString = sample.Trim();
+			OutputTextBox.Text = trimmedString;
+		}
+
+		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+			string sample = " ,,../   At Roux, our mission is to teach and inspire the next generation’s artists to create work that changes the way people think, and hopefully, even the way they act. We believe art inspires compassion by providing audiences with an empathetic outlet.  ";
+			char[] charsToTrim = { ',', '.', ' ','/' };
+			var trimmedString = sample.Trim().TrimStart(charsToTrim);
+			OutputTextBox.Text = trimmedString;
+		}
 	}
 }
