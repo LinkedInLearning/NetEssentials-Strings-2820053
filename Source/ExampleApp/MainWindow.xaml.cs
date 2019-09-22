@@ -37,7 +37,11 @@ namespace ExampleApp
 			// Split is used to break a delimited string into individual strings. 
 			// which are added to a string array 
 
-
+			var foodArray = foods.Split();
+			foreach (var food in foodArray)
+			{
+				OutputTextBox.Text += $"{food}\r\n";
+			}
 		}
 
 		private void ButtonB_Click(object sender, RoutedEventArgs e)
@@ -74,7 +78,7 @@ namespace ExampleApp
 			string foods = "kiwi, , mushroom, onion, potato, , spinach, tomato";
 			OutputTextBox.Text += $"{foods}\r\n";
 			string[] comma = { ", " };
-			var foodArray = foods.Split(comma, StringSplitOptions.None);
+			var foodArray = foods.Split(comma, StringSplitOptions.RemoveEmptyEntries);
 
 			foreach (var food in foodArray)
 			{
