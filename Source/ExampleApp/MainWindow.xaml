@@ -49,7 +49,7 @@
 							 HorizontalAlignment="Stretch"
 							 MinWidth='400'
 							 Margin='10,0'
-							 Text="1415"
+							 Text=""
 							 VerticalAlignment="Stretch" />
 		</StackPanel>
 		<TextBox x:Name="OutputTextBox"
