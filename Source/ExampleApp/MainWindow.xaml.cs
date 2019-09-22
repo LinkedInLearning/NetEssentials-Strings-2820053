@@ -31,7 +31,7 @@ namespace ExampleApp {
 
 
 			string trimmedString  = string.Empty;
-			trimmedString = sample.Trim();
+		
 			OutputTextBox.Text = trimmedString;
 		}
 
