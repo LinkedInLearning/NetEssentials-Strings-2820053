@@ -38,9 +38,16 @@
 			<Button x:Name="ButtonB"
 							Content="Comma"
 							Click='ButtonB_Click' />
+			<Button x:Name="ButtonC"
+							Content="Other split chars"
+							Click='ButtonC_Click' />
+			<Button x:Name="ButtonD"
+							Content="Remove Empty"
+							Click='ButtonD_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />
+			
 		</StackPanel>
 		<StackPanel Orientation='Horizontal'
 								DockPanel.Dock="Top"

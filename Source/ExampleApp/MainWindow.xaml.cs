@@ -25,37 +25,61 @@ namespace ExampleApp
 			InitializeComponent();
 		}
 
-		private void ClearButton_Click(object sender, RoutedEventArgs e) {
+		private void ClearButton_Click(object sender, RoutedEventArgs e)
+		{
 			OutputTextBox.Text = string.Empty;
 		}
 
-		private void ButtonA_Click(object sender, RoutedEventArgs e) {
-			string foodsA = "apple banana cherry durian eggplant fig grape honey ice";
+		private void ButtonA_Click(object sender, RoutedEventArgs e)
+		{
+			string foods = "apple banana cherry durian eggplant fig grape  honey";
+			OutputTextBox.Text += $"{foods}\r\n";
+			// Split is used to break a delimited string into individual strings. 
+			// which are added to a string array 
 
-			string foodsB = "kiwi, lemon, mushroom, onion, potato, radish, spinach, tomato";
 
-			string foodsC = "kiwi--banana--mushroom # eggplant # potato # grape.spinach.honey";
+		}
 
-			//  split into a string array
-
-			var foodArrayA = foodsA.Split();
+		private void ButtonB_Click(object sender, RoutedEventArgs e)
+		{
+			string foods = "kiwi, lemon, mushroom, onion, potato, radish, spinach, tomato";
+			OutputTextBox.Text += $"{foods}\r\n";
 
 			string[] comma = { ", " };
-			var foodArrayB = foodsB.Split(comma, StringSplitOptions.None);
+			var foodArray = foods.Split(comma, StringSplitOptions.None);
 
+			foreach (var food in foodArray)
+			{
+				OutputTextBox.Text += $"{food}\r\n";
+			}
+
+		}
+
+		private void ButtonC_Click(object sender, RoutedEventArgs e)
+		{
+			string foods = "kiwi--banana--mushroom # eggplant # potato # grape.spinach.honey";
+			OutputTextBox.Text += $"{foods}\r\n";
 			string[] splitters = { ", ", "--", ".", " # " };
 
-			var foodArrayC = foodsC.Split(splitters, StringSplitOptions.None);
+			var foodArray = foods.Split(splitters, StringSplitOptions.None);
+
+			foreach (var food in foodArray)
+			{
+				OutputTextBox.Text += $"{food}\r\n";
+			}
 		}
 
-		private void ButtonB_Click(object sender, RoutedEventArgs e) {
-			string foodsB = "kiwi, , mushroom, onion, potato, , spinach, tomato";
-
+		private void ButtonD_Click(object sender, RoutedEventArgs e)
+		{
+			string foods = "kiwi, , mushroom, onion, potato, , spinach, tomato";
+			OutputTextBox.Text += $"{foods}\r\n";
 			string[] comma = { ", " };
-			var foodArrayB = foodsB.Split(comma, StringSplitOptions.None);
-	
-		}
+			var foodArray = foods.Split(comma, StringSplitOptions.None);
 
-	
+			foreach (var food in foodArray)
+			{
+				OutputTextBox.Text += $"{food}\r\n";
+			}
+		}
 	}
 }
