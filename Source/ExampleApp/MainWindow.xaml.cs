@@ -31,29 +31,28 @@ namespace ExampleApp
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
 			string foods = "kiwi, lemon, kiwi, onion, potato, lemon, spinach, tomato, lemon, onion";
+			OutputTextBox.Text += foods + "\r\n";
 			string[] comma = { ", " };
 
 
-			var foodArrayB = foods.Split(comma, StringSplitOptions.RemoveEmptyEntries);
+			var foodArray = foods.Split(comma, StringSplitOptions.RemoveEmptyEntries);
+			var countQuery = foodArray.GroupBy(x=>x).Where(x=>x.Count() >1);
 
-			var countQuery = foodArrayB.GroupBy(x => x);
-
-			foreach (var foodItem in countQuery)
+			foreach (var food in countQuery)
 			{
-				OutputTextBox.Text += $"{foodItem.Key}: {foodItem.Count()}\r\n";
+				OutputTextBox.Text += $"{food.Key}: {food.Count()}\r\n";
 			}
 
 		}
 
-		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+		private void ButtonB_Click(object sender, RoutedEventArgs e)
+		{
 
 			string statusCodes = "#kr032,#rt887,#kr932,#wt187,#aa321,#bb872,#dm554";
-
-			
-
+			OutputTextBox.Text += statusCodes + "\r\n";
 			var statusArray = statusCodes.Split(',');
 
-		
+
 
 			foreach (var status in statusArray)
 			{
@@ -61,11 +60,12 @@ namespace ExampleApp
 			}
 			OutputTextBox.Text += "------------\r\n";
 
-			// 	var query = statusArray.Where(x => x.Contains("87"));
-			//foreach (var status in query)
-			//{
-			//	OutputTextBox.Text += $"{status} \r\n";
-			//}
+			var query = statusArray.Where(x => x.Contains("87"));
+
+			foreach (var status in query)
+			{
+				OutputTextBox.Text += $"{status} \r\n";
+			}
 		}
-	}
+		}
 }
