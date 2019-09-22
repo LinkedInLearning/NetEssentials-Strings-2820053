@@ -34,7 +34,7 @@ namespace ExampleApp
 		{
 			string[] foodArray = { "banana", "celery", "kiwi", "onion", "potato", "cherry" };
 
-			string foodString = string.Empty;
+			string foodString = string.Join("--=--", foodArray);
 
 			this.OutputTextBox.Text = foodString;
 
