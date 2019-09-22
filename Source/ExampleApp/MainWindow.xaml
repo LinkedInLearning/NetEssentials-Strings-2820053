@@ -33,9 +33,11 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Button A" />
+							Content="Substring Basics"
+							Click='ButtonA_Click' />
 			<Button x:Name="ButtonB"
-							Content="Button B" />
+							Content="With IndexOf"
+							Click='ButtonB_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />
@@ -49,7 +51,7 @@
 							 HorizontalAlignment="Stretch"
 							 MinWidth='400'
 							 Margin='10,0'
-							 Text="1415"
+							 Text="TR"
 							 VerticalAlignment="Stretch" />
 		</StackPanel>
 		<TextBox x:Name="OutputTextBox"
