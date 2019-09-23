@@ -33,7 +33,8 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Button A" />
+							Content="In String?"
+							Click='ButtonA_Click' />
 			<Button x:Name="ButtonB"
 							Content="Button B" />
 			<Button x:Name="ClearButton"
@@ -41,7 +42,7 @@
 							Click='ClearButton_Click' />
 		</StackPanel>
 		<StackPanel Orientation='Horizontal'
-								DockPanel.Dock="Top"
+								DockPanel.Dock="Top" 
 								HorizontalAlignment='Stretch'
 								Margin="40,5">
 			<TextBlock Text='Enter data:' />
@@ -49,10 +50,10 @@
 							 HorizontalAlignment="Stretch"
 							 MinWidth='400'
 							 Margin='10,0'
-							 Text=""
+							 Text="#BFR--443!"
 							 VerticalAlignment="Stretch" />
 		</StackPanel>
-		<TextBox x:Name="OutputTextBox"
+		<TextBox x:Name="OutputTextBox" 
 						 HorizontalAlignment="Stretch"
 						 Margin="40,10"
 						 TextWrapping="Wrap"

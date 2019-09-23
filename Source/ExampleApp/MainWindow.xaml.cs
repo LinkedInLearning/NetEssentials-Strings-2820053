@@ -13,15 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExampleApp
-{
+namespace ExampleApp {
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
-	{
-		public MainWindow()
-		{
+	public partial class MainWindow : Window {
+		public MainWindow() {
 			InitializeComponent();
 		}
 
@@ -29,6 +26,24 @@ namespace ExampleApp
 			OutputTextBox.Text = string.Empty;
 		}
 
+		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+			string inputString = InputTextBox.Text;
+			string message = String.Empty;
+			// String supports three methods to determine if a substring exists
+			// Contains, StartsWith, EndsWith
 
+			bool hasStartString, hasEndString, containsString;
+
+			hasStartString = false;
+			hasEndString = false;
+			containsString = false;
+
+			message = $"Starts with (#) :{hasStartString}, Contains (--): {containsString}, Ends with (!): {hasEndString}";
+			OutputTextBox.Text = message;
+
+
+
+
+		}
 	}
 }
