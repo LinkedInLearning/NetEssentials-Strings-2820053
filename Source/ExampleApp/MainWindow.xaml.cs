@@ -27,6 +27,7 @@ namespace ExampleApp {
 		}
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+			// #BFR--443!
 			string inputString = InputTextBox.Text;
 			string message = String.Empty;
 			// String supports three methods to determine if a substring exists
