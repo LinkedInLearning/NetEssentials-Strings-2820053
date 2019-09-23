@@ -27,9 +27,10 @@ namespace ExampleApp {
 		}
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
-			// 012345
-			// 0123--	Remove(2)
-			// ---345 Remove(0,3)
+			// 0123456
+			// 01234--	Remove(2)
+			// ---3456  Remove(0,3)
+			// 01----6	Remove(2,4)
 
 			string sample = this.InputTextBox.Text;
 			string prefix = "https://";
@@ -61,7 +62,7 @@ namespace ExampleApp {
 			this.OutputTextBox.Text = string.Empty;
 			string sample = "aa-ss-ee-dd-we-ss-44-ss-11-ss-d-ddf-ers";
 			this.OutputTextBox.Text += sample + "\r\n";
-			string replacedString = sample.Replace("-", ", ");
+			string replacedString = string.Empty ;
 			OutputTextBox.Text += replacedString + "\r\n";
 		}
 
@@ -69,7 +70,7 @@ namespace ExampleApp {
 			string sample = "ace-bow-cow-dew @elf @fig @gum hue# icy# jam#";
 
 			this.OutputTextBox.Text += sample + "\r\n";
-			string replacedString = sample.Replace("-", ", ").Replace("@", ", ").Replace("#", ", ");
+			string replacedString = sample.Replace("-", ", ");
 			OutputTextBox.Text += replacedString + "\r\n";
 		}
 	}
