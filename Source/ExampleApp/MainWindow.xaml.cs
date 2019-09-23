@@ -27,6 +27,10 @@ namespace ExampleApp {
 		}
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+			// 012345
+			// 0123--	Remove(2)
+			// ---345 Remove(0,3)
+
 			string sample = this.InputTextBox.Text;
 			string prefix = "https://";
 
