@@ -35,9 +35,9 @@ namespace ExampleApp {
 
 			bool hasStartString, hasEndString, containsString;
 
-			hasStartString = false;
-			hasEndString = false;
-			containsString = false;
+			hasStartString = inputString.StartsWith("#");
+			hasEndString = inputString.EndsWith("!");
+			containsString = inputString.Contains("--");
 
 			message = $"Starts with (#) :{hasStartString}, Contains (--): {containsString}, Ends with (!): {hasEndString}";
 			OutputTextBox.Text = message;
