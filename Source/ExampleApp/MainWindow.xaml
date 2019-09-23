@@ -7,7 +7,7 @@
 				mc:Ignorable="d"
 				Title="String Explorer"
 				Height="800"
-				Width="1000"
+				Width="1100"
 				FontSize="24"
 				WindowState='Maximized'>
 	<Window.Resources>
@@ -33,9 +33,19 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Button A" />
-			<Button x:Name="ButtonB"
-							Content="Button B" />
+							Content="Remove"
+							Click='ButtonA_Click' />
+			
+			<Button x:Name="Button"
+							Content="Remove (case insensitive)"
+							Click='ButtonB_Click' />	
+			<Button x:Name="ButtonC"
+							Content="Replace"
+							Click='ButtonC_Click' />
+		
+			<Button x:Name="ButtonD"
+							Content="Replace Multi"
+							Click='ButtonD_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />
@@ -49,7 +59,7 @@
 							 HorizontalAlignment="Stretch"
 							 MinWidth='400'
 							 Margin='10,0'
-							 Text=""
+							 Text="https://linkedin.com/learning"
 							 VerticalAlignment="Stretch" />
 		</StackPanel>
 		<TextBox x:Name="OutputTextBox"

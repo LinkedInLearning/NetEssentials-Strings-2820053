@@ -13,15 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExampleApp
-{
+namespace ExampleApp {
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
-	{
-		public MainWindow()
-		{
+	public partial class MainWindow : Window {
+		public MainWindow() {
 			InitializeComponent();
 		}
 
@@ -29,6 +26,47 @@ namespace ExampleApp
 			OutputTextBox.Text = string.Empty;
 		}
 
+		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+			string sample = this.InputTextBox.Text;
+			string prefix = "https://";
 
+			if (sample.StartsWith(prefix))
+			{
+				OutputTextBox.Text = sample.Remove(0, prefix.Length);
+			}
+			else
+			{
+				OutputTextBox.Text = sample;
+			}
+		}
+		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+			string sample = this.InputTextBox.Text;
+			string prefix = "https://";
+
+			if (sample.StartsWith(prefix, StringComparison.OrdinalIgnoreCase))
+			{
+				OutputTextBox.Text = sample.Remove(0, prefix.Length);
+			}
+			else
+			{
+				OutputTextBox.Text = sample;
+			}
+		}
+
+		private void ButtonC_Click(object sender, RoutedEventArgs e) {
+			this.OutputTextBox.Text = string.Empty;
+			string sample = "aa-ss-ee-dd-we-ss-44-ss-11-ss-d-ddf-ers";
+			this.OutputTextBox.Text += sample + "\r\n";
+			string replacedString = sample.Replace("-", ", ");
+			OutputTextBox.Text += replacedString + "\r\n";
+		}
+
+		private void ButtonD_Click(object sender, RoutedEventArgs e) {
+			string sample = "ace-bow-cow-dew @elf @fig @gum hue# icy# jam#";
+
+			this.OutputTextBox.Text += sample + "\r\n";
+			string replacedString = sample.Replace("-", ", ").Replace("@", ", ").Replace("#", ", ");
+			OutputTextBox.Text += replacedString + "\r\n";
+		}
 	}
 }
