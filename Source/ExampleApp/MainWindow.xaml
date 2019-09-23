@@ -33,7 +33,8 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Button A" />
+							Content="Button A"
+							Click='ButtonA_Click' />
 			<Button x:Name="ButtonB"
 							Content="Button B" />
 			<Button x:Name="ClearButton"
