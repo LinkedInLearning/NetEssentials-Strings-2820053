@@ -27,17 +27,30 @@ namespace ExampleApp {
 		}
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+			// code challenge #1
+			// write a method that takes a start word and end word and returns
+			// the substring contained between those words.
+
+			// code challenge #2
+			// write another method that takes a start word and end word and replacement string
+			// and returns a string containing the substitute text.
+
 			string sample = "At Roux Academy, our mission is to teach and inspire the next generation’s artists...";
 			string startWord = "our";
 			string endWord = "the ";
+			OutputTextBox.Text += sample + "\r\n";
 
 			string result = string.Empty;
-			result = GetSubStringBetweenWords(sample, startWord, endWord);
 
+			result = sample.Substring(20, 33);
+			result = GetSubStringBetweenWords(sample, startWord, endWord);
+			OutputTextBox.Text += result + "\r\n";
 			result = ReplaceBetweenWords(sample, startWord, endWord, " quest is to inspire and mentor ");
 
-			OutputTextBox.Text = result;
+			OutputTextBox.Text += result + "\r\n";
 		}
+
+		#region "Code Challenge solution"
 
 		public string GetSubStringBetweenWords(string candidate, string firstWord, string lastWord) {
 			string result = string.Empty;
@@ -90,5 +103,6 @@ namespace ExampleApp {
 				return string.Empty;
 			}
 		}
+		#endregion
 	}
 }
