@@ -62,7 +62,7 @@ namespace ExampleApp {
 			this.OutputTextBox.Text = string.Empty;
 			string sample = "aa-ss-ee-dd-we-ss-44-ss-11-ss-d-ddf-ers";
 			this.OutputTextBox.Text += sample + "\r\n";
-			string replacedString = string.Empty ;
+			string replacedString = sample.Replace("-",", ") ;
 			OutputTextBox.Text += replacedString + "\r\n";
 		}
 
@@ -70,7 +70,7 @@ namespace ExampleApp {
 			string sample = "ace-bow-cow-dew @elf @fig @gum hue# icy# jam#";
 
 			this.OutputTextBox.Text += sample + "\r\n";
-			string replacedString = sample.Replace("-", ", ");
+			string replacedString = sample.Replace("-", ", ").Replace("@", ", ").Replace("#", ", ");
 			OutputTextBox.Text += replacedString + "\r\n";
 		}
 	}
