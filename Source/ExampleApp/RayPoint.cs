@@ -8,6 +8,61 @@ using System.Threading.Tasks;
 namespace ExampleApp {
 	public class RayPoint : Object {
 
+		public static RayPoint Parse(string value, System.Globalization.NumberStyles numberStyles) {
+
+			switch (numberStyles)
+			{
+				case System.Globalization.NumberStyles.None:
+					break;
+				case System.Globalization.NumberStyles.AllowLeadingWhite:
+					break;
+				case System.Globalization.NumberStyles.AllowTrailingWhite:
+					break;
+				case System.Globalization.NumberStyles.AllowLeadingSign:
+					break;
+				case System.Globalization.NumberStyles.AllowTrailingSign:
+					break;
+				case System.Globalization.NumberStyles.AllowParentheses:
+					break;
+				case System.Globalization.NumberStyles.AllowDecimalPoint:
+					break;
+				case System.Globalization.NumberStyles.AllowThousands:
+					break;
+				case System.Globalization.NumberStyles.AllowExponent:
+					break;
+				case System.Globalization.NumberStyles.AllowCurrencySymbol:
+					break;
+				case System.Globalization.NumberStyles.AllowHexSpecifier:
+					break;
+				case System.Globalization.NumberStyles.Integer:
+					break;
+				case System.Globalization.NumberStyles.HexNumber:
+					break;
+				case System.Globalization.NumberStyles.Number:
+					break;
+				case System.Globalization.NumberStyles.Float:
+					break;
+				case System.Globalization.NumberStyles.Currency:
+					break;
+				case System.Globalization.NumberStyles.Any:
+					Parse(value);
+					break;
+				default:
+					break;
+			}
+			return new RayPoint();
+			
+		}
+		public static RayPoint Parse(string value, IFormatProvider formatProvider) {
+			return new RayPoint();
+
+		}
+
+		public static RayPoint Parse(string value, System.Globalization.NumberStyles numberStyles, IFormatProvider formatProvider) {
+			return new RayPoint();
+
+		}
+
 		public static RayPoint Parse(string value) {
 			// There are many ways to process the input string
 			// Regex is another option, to parse the string.
@@ -19,7 +74,7 @@ namespace ExampleApp {
 			string[] comma = { "," };
 			var splitValues = cleanedString.Split(comma, StringSplitOptions.RemoveEmptyEntries);
 
-		
+
 
 			if (splitValues.Length > 2 || splitValues.Length < 2)
 			{

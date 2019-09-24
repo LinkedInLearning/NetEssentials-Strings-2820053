@@ -28,6 +28,7 @@ namespace ExampleApp
 		private void ClearButton_Click(object sender, RoutedEventArgs e)
 		{
 			OutputTextBox.Text = string.Empty;
+			
 		}
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e)
