@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 namespace ExampleApp {
 	public class RayPoint : Object {
 
-		public override string ToString() {
-			return $"X: {X} - Y: {Y}";
-		}
+		
 
 
 		#region Constructors
