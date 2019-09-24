@@ -5,10 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ExampleApp {
-	public class RayPoint : Object {
+	public class RayPoint : Object, IFormattable {
 
 		public override string ToString() {
-			return $"X: {X} - Y: {Y}";
+			return $"From ToString()";
+		}
+		public string ToString(string format) {
+			return $"From ToString(format): (\"{format}\")";
+		}
+		public string ToString(string format, IFormatProvider formatProvider) {
+			return $"From ToString(format, formatProvider): (\"{format}, {formatProvider} \")";
 		}
 
 
