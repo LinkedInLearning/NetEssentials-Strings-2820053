@@ -15,8 +15,8 @@ namespace ExampleApp {
 		}
 		public string ToString(string format, IFormatProvider formatProvider) {
 			// format is the string that indicate what format to apply
-			// for Double, the "P" indicates to format as percent
-			// for DateTime, the "D" indicates to format as Long Date
+			// for Double type, the "P" indicates to format as percent
+			// for DateTime type, the "D" indicates to format as Long Date
 
 			// the IFormatProvider, for most implementations
 			// is where we provide the CultureInfo information.
