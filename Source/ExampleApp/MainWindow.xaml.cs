@@ -35,17 +35,9 @@ namespace ExampleApp
 
 			RayPoint point = new RayPoint(144, 27);
 
-			point.X += 12;
-			point.Y -= 6;
+			point = RayPoint.Parse("3,5");
 
-			string s1 = point.ToString();
-			Console.WriteLine(point);
-
-			string s2 = String.Concat("Use the String.Concat method: ", point);
-
-			string s3 = $"The default ToString() value: ({point})";
-
-			OutputTextBox.Text = s3;
+			OutputTextBox.Text = point.ToString();
 		}
 	}
 }
