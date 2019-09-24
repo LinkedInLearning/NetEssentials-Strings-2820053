@@ -5,10 +5,37 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ExampleApp {
-	public class RayPoint : Object {
+	public class RayPoint : Object, IFormattable {
 
 		public override string ToString() {
-			return $"X: {X} - Y: {Y}";
+			return ToString("C");
+		}
+
+		public string ToString(string format) {
+
+			string formattedString;
+			switch (format)
+			{
+				case "C":
+					formattedString = $"X: {X}, Y:{Y}";
+					break;
+				case "H":
+					formattedString = $"X: {X} - Y:{Y}";
+					break;
+				case "F":
+					formattedString = $"X: {X} --++-- Y:{Y}";
+					break;
+				default:
+					formattedString = $"X: {X}, Y:{Y}";
+					break;
+			}
+			return formattedString;
+		}
+
+		public string ToString(string format, IFormatProvider formatProvider) {
+			// use this implementation to 
+			// process other cultures (passed via the IFormatProvider)
+			return $"Culture Not Implemented yet";
 		}
 
 

@@ -30,17 +30,36 @@ namespace ExampleApp {
 
 			RayPoint point = new RayPoint(144, 27);
 
-			point.X += 12;
-			point.Y -= 6;
+
 
 			string s1 = point.ToString();
+			OutputTextBox.Text += $"s1: {s1}\r\n";
+
+			string s2 = point.ToString("H");
+			OutputTextBox.Text += $"s2: {s2}\r\n";
+			
+
+
+			OutputTextBox.Text += $"s3: {point.ToString("F")}\r\n";
+
+			OutputTextBox.Text += $"s4: {point:F}\r\n";
+
+
+
+
+
+		}
+
+		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+			RayPoint point = new RayPoint(144, 27);
+
+			// .NET calls the ToString as needed
 			Console.WriteLine(point);
 
-			string s2 = String.Concat("Use the String.Concat method: ", point);
+			// .NET calls the ToString as needed
+			string s4 = String.Concat("Use the String.Concat method: ", point);
+			string s5 = $"The default ToString() value: ({point})\r\n";
 
-			string s3 = $"The default ToString() value: ({point})";
-
-			OutputTextBox.Text = s3;
 		}
 	}
 }
