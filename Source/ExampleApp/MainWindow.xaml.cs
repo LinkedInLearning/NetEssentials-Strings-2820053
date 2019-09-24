@@ -33,11 +33,19 @@ namespace ExampleApp
 		private void ButtonA_Click(object sender, RoutedEventArgs e)
 		{
 
-			RayPoint point = new RayPoint(144, 27);
+			RayPoint point = new RayPoint() ;
+			string userString = InputTextBox.Text;
+			try
+			{
+				point = RayPoint.Parse(userString);
+			} catch (Exception ex)
+			{
 
-			point = RayPoint.Parse("3,5");
+				MessageBox.Show(ex.Message);
+			}
+		
 
-			OutputTextBox.Text = point.ToString();
+			OutputTextBox.Text += point.ToString() + "\r\n";
 		}
 	}
 }

@@ -33,10 +33,9 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="RayPoint defaults"
+							Content="Parse"
 							Click='ButtonA_Click' />
-			<Button x:Name="ButtonB"
-							Content="Button B" />
+		
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />
@@ -50,7 +49,7 @@
 							 HorizontalAlignment="Stretch"
 							 MinWidth='400'
 							 Margin='10,0'
-							 Text=""
+							 Text="30,45"
 							 VerticalAlignment="Stretch" />
 		</StackPanel>
 		<TextBox x:Name="OutputTextBox"
