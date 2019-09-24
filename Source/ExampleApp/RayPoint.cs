@@ -14,7 +14,7 @@ namespace ExampleApp {
 			return $"From ToString(format): (\"{format}\")";
 		}
 		public string ToString(string format, IFormatProvider formatProvider) {
-			return $"From ToString(format, formatProvider): (\"{format}, {formatProvider} \")";
+			return $"From ToString(format, formatProvider): (\"{format}\", {formatProvider})";
 		}
 
 

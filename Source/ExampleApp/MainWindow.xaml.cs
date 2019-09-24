@@ -29,17 +29,30 @@ namespace ExampleApp {
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
 
 			RayPoint point = new RayPoint(144, 27);
+			var culture = new System.Globalization.CultureInfo("se-SV");
 
 
 			string s1 = point.ToString();
+			string s2 = point.ToString("C");
+			string s3 = point.ToString("H", culture);
 
+			OutputTextBox.Text += $"s1: {s1}\r\n";
+			OutputTextBox.Text += $"s2: {s2}\r\n";
+			OutputTextBox.Text += $"s3: {s3}\r\n";
+
+		}
+
+		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+
+			RayPoint point = new RayPoint(144, 27);
 			Console.WriteLine(point);
 
 			string s2 = String.Concat("Use the String.Concat method: ", point);
 
 			string s3 = $"The default ToString() value: ({point})";
+			string s4 = $"The default ToString() value: ({point:X})";
 
-			OutputTextBox.Text = s3;
+	
 		}
 	}
 }
