@@ -30,22 +30,13 @@ namespace ExampleApp {
 
 			RayPoint point = new RayPoint(144, 27);
 
-
-
 			string s1 = point.ToString();
 			OutputTextBox.Text += $"s1: {s1}\r\n";
 
 			string s2 = point.ToString("H");
 			OutputTextBox.Text += $"s2: {s2}\r\n";
-			
-
-
 			OutputTextBox.Text += $"s3: {point.ToString("F")}\r\n";
-
 			OutputTextBox.Text += $"s4: {point:F}\r\n";
-
-
-
 
 
 		}
