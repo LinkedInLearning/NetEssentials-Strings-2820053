@@ -25,13 +25,15 @@ namespace ExampleApp
 			InitializeComponent();
 		}
 
-		private void ClearButton_Click(object sender, RoutedEventArgs e) {
+		private void ClearButton_Click(object sender, RoutedEventArgs e)
+		{
 			OutputTextBox.Text = string.Empty;
 		}
 
-		private void ButtonA_Click(object sender, RoutedEventArgs e) {
-			
-	 RayPoint point = new RayPoint(144, 27);
+		private void ButtonA_Click(object sender, RoutedEventArgs e)
+		{
+
+			RayPoint point = new RayPoint(144, 27);
 
 			point.X += 12;
 			point.Y -= 6;
@@ -39,7 +41,7 @@ namespace ExampleApp
 			string s1 = point.ToString();
 			Console.WriteLine(point);
 
-			string s2 = String.Concat("Use the String.Concat method: " , point);
+			string s2 = String.Concat("Use the String.Concat method: ", point);
 
 			string s3 = $"The default ToString() value: ({point})";
 
