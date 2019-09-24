@@ -13,20 +13,25 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExampleApp {
+namespace ExampleApp
+{
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window {
-		public MainWindow() {
+	public partial class MainWindow : Window
+	{
+		public MainWindow()
+		{
 			InitializeComponent();
 		}
 
-		private void ClearButton_Click(object sender, RoutedEventArgs e) {
+		private void ClearButton_Click(object sender, RoutedEventArgs e)
+		{
 			OutputTextBox.Text = string.Empty;
 		}
 
-		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+		private void ButtonA_Click(object sender, RoutedEventArgs e)
+		{
 
 			RayPoint point = new RayPoint(144, 27);
 			var cultureSV = new System.Globalization.CultureInfo("se-SV");
@@ -40,13 +45,10 @@ namespace ExampleApp {
 			OutputTextBox.Text += $"s2 (se-SV): {s2}\r\n";
 			OutputTextBox.Text += $"s3 (de-DE): {s2}\r\n";
 
-
-
-
-
 		}
 
-		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+		private void ButtonB_Click(object sender, RoutedEventArgs e)
+		{
 			RayPoint point = new RayPoint(144, 27);
 
 			// .NET calls the ToString as needed
