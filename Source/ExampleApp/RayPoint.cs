@@ -8,6 +8,20 @@ using System.Threading.Tasks;
 namespace ExampleApp {
 	public class RayPoint : Object {
 
+		public static Boolean TryParse(string value, out RayPoint point ) {
+			point = new RayPoint();
+			try
+			{
+				point = Parse(value);
+				return true;
+			} catch (Exception)
+			{
+			
+				return false;
+			}
+		
+	}
+
 		public static RayPoint Parse(string value) {
 			// There are many ways to process the input string
 			// Regex is another option, to parse the string.
@@ -34,6 +48,7 @@ namespace ExampleApp {
 
 			return new RayPoint(numbers[0], numbers[1]);
 		}
+	
 
 
 		#region ToString

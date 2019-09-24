@@ -35,7 +35,10 @@
 			<Button x:Name="ButtonA"
 							Content="Parse"
 							Click='ButtonA_Click' />
-		
+			<Button x:Name="ButtonB"
+							Content="TryParse"
+							Click='ButtonB_Click' />
+
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />
