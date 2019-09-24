@@ -33,7 +33,7 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Formatting"
+							Content="Format With Culture"
 							Click='ButtonA_Click' />
 			<Button x:Name="ButtonB"
 							Content=""

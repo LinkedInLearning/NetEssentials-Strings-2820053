@@ -29,20 +29,16 @@ namespace ExampleApp {
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
 
 			RayPoint point = new RayPoint(144, 27);
+			var cultureSV = new System.Globalization.CultureInfo("se-SV");
+			var cultureDE = new System.Globalization.CultureInfo("de-DE");
 
+			string s1 = point.ToString("C");
+			string s2 = point.ToString("C", cultureSV);
+			string s3 = point.ToString("C", cultureDE);
 
-
-			string s1 = point.ToString();
-			OutputTextBox.Text += $"s1: {s1}\r\n";
-
-			string s2 = point.ToString("H");
-			OutputTextBox.Text += $"s2: {s2}\r\n";
-			
-
-
-			OutputTextBox.Text += $"s3: {point.ToString("F")}\r\n";
-
-			OutputTextBox.Text += $"s4: {point:F}\r\n";
+			OutputTextBox.Text += $"s1 (default): {s1}\r\n";
+			OutputTextBox.Text += $"s2 (se-SV): {s2}\r\n";
+			OutputTextBox.Text += $"s3 (de-DE): {s2}\r\n";
 
 
 
