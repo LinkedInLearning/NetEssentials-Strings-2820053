@@ -14,6 +14,12 @@ namespace ExampleApp {
 			return $"From ToString(format): (\"{format}\")";
 		}
 		public string ToString(string format, IFormatProvider formatProvider) {
+			// format is the string that indicate what format to apply
+			// for Double, the "P" indicates to format as percent
+			// for DateTime, the "D" indicates to format as Long Date
+
+			// the IFormatProvider, for most implementations
+			// is where we provide the CultureInfo information.
 			return $"From ToString(format, formatProvider): (\"{format}\", {formatProvider})";
 		}
 
