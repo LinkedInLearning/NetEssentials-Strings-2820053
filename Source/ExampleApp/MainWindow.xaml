@@ -36,8 +36,7 @@
 							Content="Format With Culture"
 							Click='ButtonA_Click' />
 			<Button x:Name="ButtonB"
-							Content=""
-							Click='ButtonB_Click' />
+							Content="" />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />

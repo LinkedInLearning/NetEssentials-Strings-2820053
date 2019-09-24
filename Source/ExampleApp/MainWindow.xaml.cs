@@ -49,14 +49,7 @@ namespace ExampleApp
 
 		private void ButtonB_Click(object sender, RoutedEventArgs e)
 		{
-			RayPoint point = new RayPoint(144, 27);
-
-			// .NET calls the ToString as needed
-			Console.WriteLine(point);
-
-			// .NET calls the ToString as needed
-			string s4 = String.Concat("Use the String.Concat method: ", point);
-			string s5 = $"The default ToString() value: ({point})\r\n";
+		
 
 		}
 	}
