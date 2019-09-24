@@ -13,15 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExampleApp
-{
+namespace ExampleApp {
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
-	{
-		public MainWindow()
-		{
+	public partial class MainWindow : Window {
+		public MainWindow() {
 			InitializeComponent();
 		}
 
@@ -30,8 +27,8 @@ namespace ExampleApp
 		}
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
-			
-	 RayPoint point = new RayPoint(144, 27);
+
+			RayPoint point = new RayPoint(144, 27);
 
 			point.X += 12;
 			point.Y -= 6;
@@ -39,7 +36,7 @@ namespace ExampleApp
 			string s1 = point.ToString();
 			Console.WriteLine(point);
 
-			string s2 = String.Concat("Use the String.Concat method: " , point);
+			string s2 = String.Concat("Use the String.Concat method: ", point);
 
 			string s3 = $"The default ToString() value: ({point})";
 

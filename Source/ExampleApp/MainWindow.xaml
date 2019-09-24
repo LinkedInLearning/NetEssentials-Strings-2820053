@@ -33,7 +33,7 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="RayPoint defaults"
+							Content="RayPoint Override"
 							Click='ButtonA_Click' />
 			<Button x:Name="ButtonB"
 							Content="Button B" />

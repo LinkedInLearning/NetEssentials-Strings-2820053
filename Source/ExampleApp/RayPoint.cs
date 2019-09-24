@@ -5,14 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ExampleApp {
-	public class RayPoint : Object{
+	public class RayPoint : Object {
+
+		public override string ToString() {
+			return $"X: {X} - Y: {Y}";
+		}
+
+
+		#region Constructors
 		public RayPoint() {
 
 		}
+
 		public RayPoint(int x, int y) {
 			_x = x;
 			_y = y;
 		}
+		#endregion
+		#region Properties
+
 
 		private int _x;
 
@@ -30,6 +41,6 @@ namespace ExampleApp {
 			set { _y = value; }
 		}
 
-
+		#endregion
 	}
 }
