@@ -41,6 +41,35 @@ namespace ExampleApp
 			// "P" or "p"	Percent
 			// "X" or "x"	Hexadecimal
 
+			double currentValue = 3355.123;
+			
+			try
+			{
+				string formattedString = currentValue.ToString("E");
+
+				
+				OutputToScreen(formattedString);
+			} catch (Exception ex)
+			{
+				OutputToScreen($"Cannot format {ex.Message}");
+
+			}
+
+
+		}
+		
+
+		private void ButtonB_Click(object sender, RoutedEventArgs e)
+		{
+			// "C" or "c"	Currency
+			// "D" or "d"	Decimal
+			// "E" or "e"	Exponential
+			// "F" or "f"	Fixed-point
+			// "G" or "g"	General
+			// "N" or "n"	Number
+			// "P" or "p"	Percent
+			// "X" or "x"	Hexadecimal
+
 			double currentValue = Double.Parse(InputTextBox.Text);
 			string formatter = FormatterTextBox.Text;
 			try
@@ -54,9 +83,8 @@ namespace ExampleApp
 				OutputToScreen($"Cannot format {ex.Message}");
 
 			}
-
-
 		}
+
 		private void OutputToScreen(string message)
 		{
 			OutputTextBox.Text += message + "\r\n";
