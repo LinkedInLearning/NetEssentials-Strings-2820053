@@ -29,7 +29,6 @@ namespace ExampleApp {
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
 
 
-			OutputTextBox.Text += point.ToString() + "\r\n";
 		}
 
 		private void ButtonB_Click(object sender, RoutedEventArgs e) {
@@ -43,6 +42,7 @@ namespace ExampleApp {
 			// the goal is to parse the incoming string and split into two numbers
 			// return the X and Y values
 			// return true for these test cases
+			userString = "30,40";
 			userString = "abc30,40";
 			userString = "30,40def";
 			userString = "  30,40  ";
@@ -52,7 +52,7 @@ namespace ExampleApp {
 			userString = "30, 40, 50"; // more than two numbers, not valid
 			userString = "30"; // less than two numbers, not valid
 			userString = "abc";
-			userString = "30 40" // this is an edge case, can you parse the data with comma or with space?
+			userString = "30 40";// this is an edge case, can you parse the data with comma or with space?
 		}
 
 		public ParsedData CodeChallenge(string value) {
