@@ -7,7 +7,7 @@
 				mc:Ignorable="d"
 				Title="String Explorer"
 				Height="800"
-				Width="1000"
+				Width="1100"
 				FontSize="24"
 				WindowState='Maximized'>
 	<Window.Resources>
@@ -33,9 +33,8 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Button A" />
-			<Button x:Name="ButtonB"
-							Content="Button B" />
+							Content="Apply Formatter"
+							Click='ButtonA_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />
@@ -43,14 +42,34 @@
 		<StackPanel Orientation='Horizontal'
 								DockPanel.Dock="Top"
 								HorizontalAlignment='Stretch'
-								Margin="40,5">
-			<TextBlock Text='Enter data:' />
+								Margin="40,5"
+								MinHeight="40">
+			<TextBlock Text='Number data:' />
 			<TextBox x:Name="InputTextBox"
 							 HorizontalAlignment="Stretch"
-							 MinWidth='400'
+							 MinWidth='300'
 							 Margin='10,0'
-							 Text=""
+							 Text="2367.9812"
 							 VerticalAlignment="Stretch" />
+
+			<TextBlock Text='Add Formatter:' />
+			<TextBox x:Name="FormatterTextBox"
+							 HorizontalAlignment="Stretch"
+							 MinWidth='140'
+							 Margin='10,0'
+							 Text="N2" />
+		</StackPanel>
+		<StackPanel DockPanel.Dock='Top'
+								HorizontalAlignment='Stretch'
+								Margin="40,5">
+			<TextBlock  Text="(C)	Currency" />
+			<TextBlock  Text="(D)	Decimal" />
+			<TextBlock  Text="(E)	Exponential" />
+			<TextBlock  Text="(F)	Fixed-point" />
+			<TextBlock  Text="(G)	General" />
+			<TextBlock  Text="(P)	Percent" />
+			<TextBlock  Text="(X)	Hexadecimal" />
+
 		</StackPanel>
 		<TextBox x:Name="OutputTextBox"
 						 HorizontalAlignment="Stretch"
@@ -61,5 +80,6 @@
 						 IsReadOnly="True"
 						 DockPanel.Dock="Top"
 						 VerticalScrollBarVisibility='Visible' />
+
 	</DockPanel>
 </Window>
