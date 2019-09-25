@@ -13,25 +13,31 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExampleApp {
+namespace ExampleApp
+{
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window {
-		public MainWindow() {
+	public partial class MainWindow : Window
+	{
+		public MainWindow()
+		{
 			InitializeComponent();
 		}
 
-		private void ClearButton_Click(object sender, RoutedEventArgs e) {
+		private void ClearButton_Click(object sender, RoutedEventArgs e)
+		{
 			OutputTextBox.Text = string.Empty;
 		}
 
-		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+		private void ButtonA_Click(object sender, RoutedEventArgs e)
+		{
 
 
 		}
 
-		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+		private void ButtonB_Click(object sender, RoutedEventArgs e)
+		{
 
 			RayPoint point;
 			string userString = "30,40";
@@ -53,15 +59,19 @@ namespace ExampleApp {
 			userString = "30"; // less than two numbers, not valid
 			userString = "abc";
 			userString = "30 40";// this is an edge case, can you parse the data with comma or with space?
+
+			//	System.Text.RegularExpressions // has some useful methods too
 		}
 
-		public ParsedData CodeChallenge(string value) {
+		public ParsedData CodeChallenge(string value)
+		{
 			var parsed = new ParsedData();
 			return parsed;
-	}
+		}
 
 	}
-	public struct ParsedData {
+	public struct ParsedData
+	{
 		public bool WasParsed { get; set; }
 		public int X { get; set; }
 		public int Y { get; set; }
