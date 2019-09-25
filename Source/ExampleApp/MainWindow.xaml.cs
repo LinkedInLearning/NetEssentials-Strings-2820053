@@ -13,20 +13,25 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExampleApp {
+namespace ExampleApp
+{
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window {
-		public MainWindow() {
+	public partial class MainWindow : Window
+	{
+		public MainWindow()
+		{
 			InitializeComponent();
 		}
 
-		private void ClearButton_Click(object sender, RoutedEventArgs e) {
+		private void ClearButton_Click(object sender, RoutedEventArgs e)
+		{
 			OutputTextBox.Text = string.Empty;
 		}
 
-		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+		private void ButtonA_Click(object sender, RoutedEventArgs e)
+		{
 			// "C" or "c"	Currency
 			// "D" or "d"	Decimal
 			// "E" or "e"	Exponential
@@ -40,7 +45,9 @@ namespace ExampleApp {
 			string formatter = FormatterTextBox.Text;
 			try
 			{
-				string formattedString = currentValue.ToString($"{ formatter}");
+				string formattedString = currentValue.ToString("E");
+
+				formattedString = currentValue.ToString($"{ formatter}");
 				OutputToScreen(formattedString);
 			} catch (Exception ex)
 			{
@@ -50,7 +57,8 @@ namespace ExampleApp {
 
 
 		}
-		private void OutputToScreen(string message) {
+		private void OutputToScreen(string message)
+		{
 			OutputTextBox.Text += message + "\r\n";
 		}
 	}
