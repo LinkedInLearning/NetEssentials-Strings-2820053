@@ -33,8 +33,11 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Apply Formatter"
+							Content="Custom Formatter 1"
 							Click='ButtonA_Click' />
+			<Button x:Name="Buttonb"
+							Content="Custom Formatter 2"
+							Click='Buttonb_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />
@@ -57,8 +60,7 @@
 							 HorizontalAlignment="Stretch"
 							 MinWidth='140'
 							 Margin='10,0'
-							 Text="#,##.00‰"
-							 TextChanged='FormatterTextBox_TextChanged' />
+							 Text="0.###000E+000" />
 		</StackPanel>
 		<StackPanel DockPanel.Dock='Top'
 								HorizontalAlignment='Stretch'
@@ -68,8 +70,7 @@
 			<TextBlock  Text=".:	Decimal point" />
 			<TextBlock  Text=",:	Group Separator" />
 			<TextBlock  Text="‰:	Per mille Placeholder" /> 
-			<TextBlock  Text="(P)	Percent" />
-			<TextBlock  Text="(X)	Hexadecimal" />
+		
 
 		</StackPanel>
 		<TextBox x:Name="OutputTextBox"
