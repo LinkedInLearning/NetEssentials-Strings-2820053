@@ -9,30 +9,12 @@ namespace ExampleApp {
 	public class RayPoint : Object {
 
 		public static RayPoint Parse(string value) {
-			// There are many ways to process the input string
-			// Regex is another option, to parse the string.
-			// for details, learn more in our catalog
-
-
-			//string parsedString = value.Trim();
-			var cleanedString = Regex.Replace(value, "[^0-9,-]", "");
-			string[] comma = { "," };
-			var splitValues = cleanedString.Split(comma, StringSplitOptions.RemoveEmptyEntries);
-
 		
-
-			if (splitValues.Length > 2 || splitValues.Length < 2)
-			{
-
-				throw new InvalidCastException($"Cannot parse the value ({value}) into a RayPoint");
-			}
+			// solution code or similar will go here 
+			// see instructor solution in next video
 
 
-			List<int> numbers = new List<int>(Array.ConvertAll(splitValues, int.Parse));
-
-
-
-			return new RayPoint(numbers[0], numbers[1]);
+			return new RayPoint();
 		}
 
 

@@ -27,17 +27,6 @@ namespace ExampleApp {
 		}
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
-		
-			RayPoint point = new RayPoint();
-			string userString = InputTextBox.Text;
-			try
-			{
-				point = RayPoint.Parse(userString);
-			} catch (Exception ex)
-			{
-
-				MessageBox.Show(ex.Message);
-			}
 
 
 			OutputTextBox.Text += point.ToString() + "\r\n";
@@ -49,9 +38,10 @@ namespace ExampleApp {
 			string userString = "30,40";
 			point = RayPoint.Parse(userString);
 			// code challenge:  
-			// write a method that returns a boolean 
+			// write a method that returns a three values (boolean, X, Y) 
 			// method has one string parameter
 			// the goal is to parse the incoming string and split into two numbers
+			// return the X and Y values
 			// return true for these test cases
 			userString = "abc30,40";
 			userString = "30,40def";
@@ -61,10 +51,20 @@ namespace ExampleApp {
 			// return false for these test cases
 			userString = "30, 40, 50"; // more than two numbers, not valid
 			userString = "30"; // less than two numbers, not valid
-			userString = "abc"; 
+			userString = "abc";
 			userString = "30 40" // this is an edge case, can you parse the data with comma or with space?
 		}
 
+		public ParsedData CodeChallenge(string value) {
+			var parsed = new ParsedData();
+			return parsed;
+	}
+
+	}
+	public struct ParsedData {
+		public bool WasParsed { get; set; }
+		public int X { get; set; }
+		public int Y { get; set; }
 
 	}
 }
