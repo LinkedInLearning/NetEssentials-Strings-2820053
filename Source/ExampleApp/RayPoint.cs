@@ -11,7 +11,7 @@ namespace ExampleApp {
 		public static RayPoint Parse(string value) {
 			// There are many ways to process the input string
 			// Regex is another option, to parse the string.
-			// for details, learn more in our catalog
+			// for details, learn more in our catalog	
 
 
 			//string parsedString = value.Trim();
@@ -19,18 +19,13 @@ namespace ExampleApp {
 			string[] comma = { "," };
 			var splitValues = cleanedString.Split(comma, StringSplitOptions.RemoveEmptyEntries);
 
-		
-
 			if (splitValues.Length > 2 || splitValues.Length < 2)
 			{
 
 				throw new InvalidCastException($"Cannot parse the value ({value}) into a RayPoint");
 			}
 
-
 			List<int> numbers = new List<int>(Array.ConvertAll(splitValues, int.Parse));
-
-
 
 			return new RayPoint(numbers[0], numbers[1]);
 		}

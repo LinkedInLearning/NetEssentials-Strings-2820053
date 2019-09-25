@@ -61,8 +61,8 @@ namespace ExampleApp {
 			// return false for these test cases
 			userString = "30, 40, 50"; // more than two numbers, not valid
 			userString = "30"; // less than two numbers, not valid
-			userString = "abc"; 
-			userString = "30 40" // this is an edge case, can you parse the data with comma or with space?
+			userString = "abc";
+			userString = "30 40"; // this is an edge case, can you parse the data with comma or with space?
 		}
 
 
