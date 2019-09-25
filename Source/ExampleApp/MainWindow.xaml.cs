@@ -13,27 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExampleApp
-{
+namespace ExampleApp {
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
-	{
-		public MainWindow()
-		{
+	public partial class MainWindow : Window {
+		public MainWindow() {
 			InitializeComponent();
 		}
 
-		private void ClearButton_Click(object sender, RoutedEventArgs e)
-		{
+		private void ClearButton_Click(object sender, RoutedEventArgs e) {
 			OutputTextBox.Text = string.Empty;
 		}
 
-		private void ButtonA_Click(object sender, RoutedEventArgs e)
-		{
-
-			RayPoint point = new RayPoint() ;
+		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+		
+			RayPoint point = new RayPoint();
 			string userString = InputTextBox.Text;
 			try
 			{
@@ -43,9 +38,33 @@ namespace ExampleApp
 
 				MessageBox.Show(ex.Message);
 			}
-		
+
 
 			OutputTextBox.Text += point.ToString() + "\r\n";
 		}
+
+		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+
+			RayPoint point;
+			string userString = "30,40";
+			point = RayPoint.Parse(userString);
+			// code challenge:  
+			// write a method that returns a boolean 
+			// method has one string parameter
+			// the goal is to parse the incoming string and split into two numbers
+			// return true for these test cases
+			userString = "abc30,40";
+			userString = "30,40def";
+			userString = "  30,40  ";
+			userString = "-30,40";
+			userString = "30, -40";
+			// return false for these test cases
+			userString = "30, 40, 50"; // more than two numbers, not valid
+			userString = "30"; // less than two numbers, not valid
+			userString = "abc"; 
+			userString = "30 40" // this is an edge case, can you parse the data with comma or with space?
+		}
+
+
 	}
 }
