@@ -53,5 +53,9 @@ namespace ExampleApp {
 		private void OutputToScreen(string message) {
 			OutputTextBox.Text += message + "\r\n";
 		}
+
+		private void FormatterTextBox_TextChanged(object sender, TextChangedEventArgs e) {
+
+		}
 	}
 }
