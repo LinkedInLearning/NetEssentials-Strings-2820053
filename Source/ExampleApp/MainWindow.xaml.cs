@@ -20,7 +20,9 @@ namespace ExampleApp
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e)
 		{
-			// https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings
+			#region Documentation
+			// https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings 
+			#endregion
 			// "d"	Short date pattern.
 			// "D"	Long date pattern.
 
@@ -54,8 +56,11 @@ namespace ExampleApp
 
 		private void ButtonB_Click(object sender, RoutedEventArgs e)
 		{
+			#region Documentation
+
 			// https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
 
+			#endregion
 			DateTime date1 = new DateTime(year: 2002, month: 7, day: 29, 
 																		hour: 9, minute: 19, second: 29);
 			OutputToScreen(date1.ToString());
