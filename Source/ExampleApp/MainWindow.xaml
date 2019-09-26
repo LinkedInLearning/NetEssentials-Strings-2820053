@@ -33,11 +33,11 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Custom Formatter 1"
+							Content="Date Format"
 							Click='ButtonA_Click' />
-			<Button x:Name="Buttonb"
-							Content="Custom Formatter 2"
-							Click='Buttonb_Click' />
+			<Button x:Name="ButtonB"
+							Content="Date Custom"
+							Click='ButtonB_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />
@@ -52,27 +52,12 @@
 							 HorizontalAlignment="Stretch"
 							 MinWidth='300'
 							 Margin='10,0'
-							 Text="2367.9812"
+							 Text=""
 							 VerticalAlignment="Stretch" />
-
-			<TextBlock Text='Add Formatter:' />
-			<TextBox x:Name="FormatterTextBox"
-							 HorizontalAlignment="Stretch"
-							 MinWidth='140'
-							 Margin='10,0'
-							 Text="0.###000E+000" />
 		</StackPanel>
 		<StackPanel DockPanel.Dock='Top'
 								HorizontalAlignment='Stretch'
-								Margin="40,5">
-			<TextBlock  Text="0: Zero Placeholder" />
-			<TextBlock  Text="#: Digit Placeholder" />
-			<TextBlock  Text=".:	Decimal point" />
-			<TextBlock  Text=",:	Group Separator" />
-			<TextBlock  Text="‰:	Per mille Placeholder" /> 
-		
-
-		</StackPanel>
+								Margin="40,5" />
 		<TextBox x:Name="OutputTextBox"
 						 HorizontalAlignment="Stretch"
 						 Margin="40,10"
