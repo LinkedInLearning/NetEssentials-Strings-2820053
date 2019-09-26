@@ -36,7 +36,8 @@
 							Content="Button A"
 							Click='ButtonA_Click' />
 			<Button x:Name="ButtonB"
-							Content="Button B" />
+							Content="Button B"
+							Click='ButtonB_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />
