@@ -1,27 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace ExampleApp
-{
+namespace ExampleApp {
+
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
-	{
-		public MainWindow()
-		{
+	public partial class MainWindow : Window {
+
+		public MainWindow() {
 			InitializeComponent();
 		}
 
@@ -29,6 +17,61 @@ namespace ExampleApp
 			OutputTextBox.Text = string.Empty;
 		}
 
+		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+			int result;
 
+			var inputString = new List<string> { "123", "-45", "1,543", "123.5", "(46)", "", "hi" };
+
+			foreach (var input in inputString)
+			{
+				try
+				{
+					result = Convert.ToInt32(input);
+					OutputTextBox.Text += $"{input}: converted to {input}\r\n";
+				} catch (Exception)
+				{
+					result = 0;
+					OutputTextBox.Text += $"Cannot convert \"{input}\" to an Int32.\r\n";
+				}
+			}
+		}
+
+		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+			double result;
+
+			var inputString = new List<string> { "123", "-45", "1,543", "123.5", "(46)", "", "hi" };
+
+			foreach (var input in inputString)
+			{
+				try
+				{
+					result = Convert.ToDouble(input);
+					OutputTextBox.Text += $"{input}: converted to {input}\r\n";
+				} catch (Exception)
+				{
+					result = 0;
+					OutputTextBox.Text += $"Cannot convert \"{input}\" to an Double.\r\n";
+				}
+			}
+		}
+
+		private void ButtonC_Click(object sender, RoutedEventArgs e) {
+			int result;
+
+			var inputString = new List<string> { "123", "-45", "1,543", "123.5", "(46)", "", "hi" };
+
+			foreach (var input in inputString)
+			{
+				try
+				{
+					result = Int32.Parse(input, System.Globalization.NumberStyles.Any);
+					OutputTextBox.Text += $"{input}: converted to {input}\r\n";
+				} catch (Exception)
+				{
+					result = 0;
+					OutputTextBox.Text += $"Cannot convert \"{input}\" to an Int32.\r\n";
+				}
+			}
+		}
 	}
 }
