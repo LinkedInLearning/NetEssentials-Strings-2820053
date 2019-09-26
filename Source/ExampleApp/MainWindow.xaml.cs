@@ -33,8 +33,8 @@ namespace ExampleApp
 
 			try
 			{
-				OutputToScreen($"Short date:\t(D)\t{date1:D}");
-				OutputToScreen($"Long date\t(d)\t{date1:d}");
+				OutputToScreen($"Long date:\t(D)\t{date1:D}");
+				OutputToScreen($"Short date\t(d)\t{date1:d}");
 				OutputToScreen($"Long time\t(T)\t{date1:T}");
 				OutputToScreen($"Short time\t(t)\t{date1:t}");
 
