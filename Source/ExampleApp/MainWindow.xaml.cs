@@ -24,7 +24,8 @@ namespace ExampleApp
 			// "d"	Short date pattern.
 			// "D"	Long date pattern.
 
-			DateTime date1 = new DateTime(year: 2002, month: 7, day: 29, hour: 9, minute: 19, second: 29);
+			DateTime date1 = new DateTime(year: 2002, month: 7, day: 29, 
+																		hour: 9, minute: 19, second: 29);
 
 			OutputToScreen(date1.ToString());
 
@@ -55,7 +56,8 @@ namespace ExampleApp
 		{
 			// https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
 
-			DateTime date1 = new DateTime(year: 2002, month: 7, day: 29, hour: 9, minute: 19, second: 29);
+			DateTime date1 = new DateTime(year: 2002, month: 7, day: 29, 
+																		hour: 9, minute: 19, second: 29);
 			OutputToScreen(date1.ToString());
 			try
 			{
