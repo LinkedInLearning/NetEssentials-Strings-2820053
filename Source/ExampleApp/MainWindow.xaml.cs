@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ExampleApp
 {
@@ -36,14 +24,12 @@ namespace ExampleApp
 			// "d"	Short date pattern.
 			// "D"	Long date pattern.
 
-
 			DateTime date1 = new DateTime(year: 2002, month: 7, day: 29, hour: 9, minute: 19, second: 29);
 
 			OutputToScreen(date1.ToString());
-		
+
 			try
 			{
-			
 				OutputToScreen($"Short date:\t(D)\t{date1:D}");
 				OutputToScreen($"Long date\t(d)\t{date1:d}");
 				OutputToScreen($"Long time\t(T)\t{date1:T}");
@@ -54,41 +40,30 @@ namespace ExampleApp
 				OutputToScreen($"Year\t(Y)\t{date1:Y}");
 				OutputToScreen($"Sortable\t(s)\t{date1:s}");
 				OutputToScreen($"Sortable\t(s)\t{date1.AddDays(2):s}");
-
-
-
 			} catch (Exception)
 			{
-
 				OutputToScreen("Cannot use that formatter.");
 			}
-		
-
-			
-
 		}
+
 		private void OutputToScreen(string message)
 		{
 			OutputTextBox.Text += message + "\r\n";
 		}
 
-		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+		private void ButtonB_Click(object sender, RoutedEventArgs e)
+		{
 			// https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
 
 			DateTime date1 = new DateTime(year: 2002, month: 7, day: 29, hour: 9, minute: 19, second: 29);
 			OutputToScreen(date1.ToString());
 			try
 			{
-
 				OutputToScreen($"dd-MM-yy:\t\t{date1:dd-MM-yy}");
 				OutputToScreen($"mm^HH^ss:\t\t{date1:mm^HH^ss}");
 				OutputToScreen($"Year:(yyyy) \"Month\"(MM):\t{date1:Year:(yyyy) \"Month\"(MM)}");
-				
-
-
 			} catch (Exception)
 			{
-
 				OutputToScreen("Cannot use that formatter.");
 			}
 		}
