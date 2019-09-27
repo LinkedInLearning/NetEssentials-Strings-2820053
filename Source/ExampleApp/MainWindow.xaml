@@ -12,7 +12,7 @@
 				WindowState='Maximized'>
 	<Window.Resources>
 		<Style TargetType='Button'>
-			<Setter Property='HorizontalAlignment'
+			<Setter Property='HorizontalAlignment' 
 							Value='Center' />
 			<Setter Property='VerticalAlignment'
 							Value='Top' />
@@ -33,9 +33,14 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Button A" />
+							Content="CultureInfo"
+							Click='ButtonA_Click' />
 			<Button x:Name="ButtonB"
-							Content="Button B" />
+							Content="List Month Names"
+							Click='ButtonB_Click' />
+			<Button x:Name="ButtonC"
+							Content="List Weekday Names"
+							Click='ButtonC_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />
@@ -52,14 +57,42 @@
 							 Text=""
 							 VerticalAlignment="Stretch" />
 		</StackPanel>
-		<TextBox x:Name="OutputTextBox"
-						 HorizontalAlignment="Stretch"
-						 Margin="40,10"
-						 TextWrapping="Wrap"
-						 Text=""
-						 VerticalAlignment="Stretch"
-						 IsReadOnly="True"
-						 DockPanel.Dock="Top"
-						 VerticalScrollBarVisibility='Visible' />
+		<Grid DockPanel.Dock='Top' >
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width='1*' />
+				<ColumnDefinition Width='1*' />
+				<ColumnDefinition Width='1*' />
+			</Grid.ColumnDefinitions>
+			<TextBox x:Name="OutputTextBox1"
+							 HorizontalAlignment="Stretch"
+							 Grid.Column='0'
+							 MinWidth='240'
+							 Margin="10"
+							 TextWrapping="Wrap"
+							 Text=""
+							 VerticalAlignment="Stretch"
+							 IsReadOnly="True"
+							 DockPanel.Dock="Left"
+							 VerticalScrollBarVisibility='Visible' />
+			<TextBox x:Name="OutputTextBox2"
+							 HorizontalAlignment="Stretch"
+							 Margin="10"
+							 TextWrapping="Wrap"
+							 Text=""
+							 VerticalAlignment="Stretch"
+							 IsReadOnly="True"
+							 Grid.Column='1'
+							 VerticalScrollBarVisibility='Visible' />
+			<TextBox x:Name="OutputTextBox3"
+							 MinWidth='140'
+							 HorizontalAlignment="Stretch"
+							 Margin="10"
+							 TextWrapping="Wrap"
+							 Text=""
+							 VerticalAlignment="Stretch"
+							 IsReadOnly="True"
+							 Grid.Column='2'
+							 VerticalScrollBarVisibility='Visible' />
+		</Grid>
 	</DockPanel>
 </Window>
