@@ -18,6 +18,17 @@ namespace ExampleApp {
 		}
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+			
+			// use Convert class to convert between data types.
+			int intResult = Convert.ToInt32(13.4);
+			OutputTextBox.Text += $"Convert.ToInt32(13.4) = {intResult}\r\n";
+
+			 intResult = Convert.ToInt32(13.6);
+			OutputTextBox.Text += $"Convert.ToInt32(13.6) = {intResult}\r\n";
+		}
+
+		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+
 			int result;
 
 			var inputString = new List<string> { "123", "-45", "1,543", "123.5", "(46)", "", "hi" };
@@ -36,7 +47,7 @@ namespace ExampleApp {
 			}
 		}
 
-		private void ButtonB_Click(object sender, RoutedEventArgs e) {
+		private void ButtonC_Click(object sender, RoutedEventArgs e) {
 			double result;
 
 			var inputString = new List<string> { "123", "-45", "1,543", "123.5", "(46)", "", "hi" };
@@ -55,7 +66,8 @@ namespace ExampleApp {
 			}
 		}
 
-		private void ButtonC_Click(object sender, RoutedEventArgs e) {
+		private void ButtonD_Click(object sender, RoutedEventArgs e)
+		{
 			int result;
 
 			var inputString = new List<string> { "123", "-45", "1,543", "123.5", "(46)", "", "hi" };
