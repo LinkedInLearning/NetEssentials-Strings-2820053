@@ -1,119 +1,89 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace ExampleApp
-{
+namespace ExampleApp {
+
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
-	{
-		public MainWindow()
-		{
+	public partial class MainWindow : Window {
+
+		public MainWindow() {
 			InitializeComponent();
 		}
 
-		private void ClearButton_Click(object sender, RoutedEventArgs e) {
-			OutputTextBox1.Text = OutputTextBox2.Text = OutputTextBox3.Text = string.Empty;
-		}
+		private CultureInfo _cultureUS = new CultureInfo("en-US");
+		private CultureInfo _cultureDE = new CultureInfo("de-DE");
+		private CultureInfo _cultureInvariant = new CultureInfo("");
+		private Decimal _saleAmountUS, _saleAmountDE;
+		private string _amountAsUsCurrency1, _amountAsDeCurrency1, _amountAsInvariantCurrency1;
+		private string _amountAsUsCurrency2, _amountAsDeCurrency2, _amountAsInvariantCurrency2;
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
-			var culture1 = new System.Globalization.CultureInfo("en-US");
-			var culture2 = new System.Globalization.CultureInfo("fr-BE");
-			var culture3 = new System.Globalization.CultureInfo("zh-SG");
-
-			OutputTextBox1.Text += $"Culture ID: {culture1.Name}\r\n";
-			OutputTextBox2.Text += $"Culture ID: {culture2.Name}\r\n";
-			OutputTextBox3.Text += $"Culture ID: {culture3.Name}\r\n";
-
-			OutputTextBox1.Text += $"English Name: {culture1.EnglishName	}\r\n";
-			OutputTextBox2.Text += $"English Name: {culture2.EnglishName}\r\n";
-			OutputTextBox3.Text += $"English Name: {culture3.EnglishName}\r\n";
-
-			OutputTextBox1.Text += $"Native Name: {culture1.NativeName  }\r\n";
-			OutputTextBox2.Text += $"Native Name: {culture2.NativeName}\r\n";
-			OutputTextBox3.Text += $"Native Name: {culture3.NativeName}\r\n";
-
-			OutputTextBox1.Text += $"-----------------\r\n";
-			OutputTextBox2.Text += $"-----------------\r\n";
-			OutputTextBox3.Text += $"-----------------\r\n";
-
-			OutputTextBox1.Text += $"Native Calendar: {culture1.DateTimeFormat.NativeCalendarName }\r\n";
-			OutputTextBox2.Text += $"Native Calendar: {culture2.DateTimeFormat.NativeCalendarName}\r\n";
-			OutputTextBox3.Text += $"Native Calendar: {culture3.DateTimeFormat.NativeCalendarName}\r\n";
-
-			OutputTextBox1.Text += $"Month Day Pattern: {culture1.DateTimeFormat.LongDatePattern  }\r\n";
-			OutputTextBox2.Text += $"Month Day Pattern: {culture2.DateTimeFormat.LongDatePattern}\r\n";
-			OutputTextBox3.Text += $"Month Day Pattern: {culture3.DateTimeFormat.LongDatePattern}\r\n";
-
-			
-
-
-			OutputTextBox1.Text += $"-----------------\r\n";
-			OutputTextBox2.Text += $"-----------------\r\n";
-			OutputTextBox3.Text += $"-----------------\r\n";
-
-			OutputTextBox1.Text += $"NumberDecimalSeparator: {culture1.NumberFormat.NumberDecimalSeparator }\r\n";
-			OutputTextBox2.Text += $"NumberDecimalSeparator: {culture2.NumberFormat.NumberDecimalSeparator }\r\n";
-			OutputTextBox3.Text += $"NumberDecimalSeparator: {culture3.NumberFormat.NumberDecimalSeparator }\r\n";
-
-			OutputTextBox1.Text += $"NumberGroupSeparator: {culture1.NumberFormat.NumberGroupSeparator }\r\n";
-			OutputTextBox2.Text += $"NumberGroupSeparator: {culture2.NumberFormat.NumberGroupSeparator }\r\n";
-			OutputTextBox3.Text += $"NumberGroupSeparator: {culture3.NumberFormat.NumberGroupSeparator }\r\n";
-
-			OutputTextBox1.Text += $"CurrencySymbol: {culture1.NumberFormat.CurrencySymbol }\r\n";
-			OutputTextBox2.Text += $"CurrencySymbol: {culture2.NumberFormat.CurrencySymbol }\r\n";
-			OutputTextBox3.Text += $"CurrencySymbol: {culture3.NumberFormat.CurrencySymbol }\r\n";
-
-			OutputTextBox1.Text += $"NumberDecimalDigits: {culture1.NumberFormat.NumberDecimalDigits }\r\n";
-			OutputTextBox2.Text += $"NumberDecimalDigits: {culture2.NumberFormat.NumberDecimalDigits }\r\n";
-			OutputTextBox3.Text += $"NumberDecimalDigits: {culture3.NumberFormat.NumberDecimalDigits }\r\n";
+			try
+			{
+				ParseDataUS();
+				OutputTextBox1.Text += $"US:\t\t{_amountAsUsCurrency1}\r\n";
+				OutputTextBox1.Text += $"DE:\t\t{_amountAsDeCurrency1}\r\n";
+				OutputTextBox1.Text += $"Invariant:\t{_amountAsInvariantCurrency1}\r\n";
+			} catch (Exception)
+			{
+				throw;
+			}
 		}
 
+	
+
 		private void ButtonB_Click(object sender, RoutedEventArgs e) {
-			var culture1 = new System.Globalization.CultureInfo("en-US");
-			var culture2 = new System.Globalization.CultureInfo("fr-BE");
-			var culture3 = new System.Globalization.CultureInfo("zh-SG");
-
-			OutputTextBox1.Text += $"Month Names\r\n";
-			OutputTextBox2.Text += $"Month Names\r\n";
-			OutputTextBox3.Text += $"Month Names\r\n";
-			for (int i = 0; i < 12; i++)
+			try
 			{
-				OutputTextBox1.Text += $"  {culture1.DateTimeFormat.MonthNames[i]}\r\n";
-				OutputTextBox2.Text += $"  {culture2.DateTimeFormat.MonthNames[i]}\r\n";
-				OutputTextBox3.Text += $"  {culture3.DateTimeFormat.MonthNames[i]}\r\n";
-			}
+				ParseDataDE();
 
+				OutputTextBox2.Text += $"US:\t\t{_amountAsUsCurrency2}\r\n";
+				OutputTextBox2.Text += $"DE:\t\t{_amountAsDeCurrency2}\r\n";
+				OutputTextBox2.Text += $"Invariant:\t{_amountAsInvariantCurrency2}\r\n";
+			} catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		private void ParseDataUS() {
+			_saleAmountUS = Decimal.Parse(InputTextBox.Text, NumberStyles.Any, _cultureUS);
+			_amountAsUsCurrency1 = _saleAmountUS.ToString("C", _cultureUS);
+			_amountAsDeCurrency1 = _saleAmountUS.ToString("C", _cultureDE);
+			_amountAsInvariantCurrency1 = _saleAmountUS.ToString("C", _cultureInvariant); ;
+		}
+
+		private void ParseDataDE() {
+			_saleAmountDE = Decimal.Parse(InputTextBoxDE.Text, NumberStyles.Any, _cultureDE);
+			_amountAsUsCurrency2 = _saleAmountDE.ToString("C", _cultureUS);
+			_amountAsDeCurrency2 = _saleAmountDE.ToString("C", _cultureDE);
+			_amountAsInvariantCurrency2 = _saleAmountDE.ToString("C", _cultureInvariant);
 		}
 
 		private void ButtonC_Click(object sender, RoutedEventArgs e) {
-			var culture1 = new System.Globalization.CultureInfo("en-US");
-			var culture2 = new System.Globalization.CultureInfo("fr-BE");
-			var culture3 = new System.Globalization.CultureInfo("zh-SG");
-
-			OutputTextBox1.Text += $"Day Names\r\n";
-			OutputTextBox2.Text += $"Day Names\r\n";
-			OutputTextBox3.Text += $"Day Names\r\n";
-			for (int i = 0; i < 7; i++)
+			// use invariant versions for comparison where culture isn't important
+		
+			ParseDataUS();
+			ParseDataDE();
+			if (_amountAsInvariantCurrency1 == _amountAsInvariantCurrency2)
 			{
-				OutputTextBox1.Text += $"  {culture1.DateTimeFormat.DayNames[i]}\r\n";
-				OutputTextBox2.Text += $"  {culture2.DateTimeFormat.DayNames[i]}\r\n";
-				OutputTextBox3.Text += $"  {culture3.DateTimeFormat.DayNames[i]}\r\n";
+				OutputTextBox3.Text += $"{_amountAsInvariantCurrency1} == {_amountAsInvariantCurrency2}\r\n";
 			}
+			else
+
+			{
+				OutputTextBox3.Text += $"{_amountAsInvariantCurrency1} != {_amountAsInvariantCurrency2}\r\n";
+			}
+		}
+		private void ButtonD_Click(object sender, RoutedEventArgs e) {
+			InputTextBox.Text = "4,615.44";
+			InputTextBoxDE.Text = "4.615,44";
+		}
+		private void ClearButton_Click(object sender, RoutedEventArgs e) {
+			OutputTextBox1.Text = OutputTextBox2.Text = OutputTextBox3.Text = string.Empty;
 		}
 	}
 }
