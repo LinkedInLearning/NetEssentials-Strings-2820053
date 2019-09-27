@@ -20,6 +20,12 @@ namespace ExampleApp {
 		private List<string> _inputStrings = new List<string> { "123", "-45", "1,543", "(46)", "123.5", "", "hi" };
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+
+			// The TryParse method is like the Parse method, 
+			// except the TryParse method does not throw an exception 
+			// if the conversion fails. 
+			// It eliminates the need to use exception handling to test for a FormatException
+
 			int intResult;
 
 			foreach (var input in _inputStrings)
