@@ -33,13 +33,13 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Button A"
+							Content="Int32 TryParse"
 							Click='ButtonA_Click' />
 			<Button x:Name="ButtonB"
-							Content="Button B"
+							Content="Double TryParse"
 							Click='ButtonB_Click' />
 			<Button x:Name="ButtonC"
-							Content="Button C"
+							Content="DateTime TryParse"
 							Click='ButtonC_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear"

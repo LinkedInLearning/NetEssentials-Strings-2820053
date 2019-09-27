@@ -17,59 +17,55 @@ namespace ExampleApp {
 			OutputTextBox.Text = string.Empty;
 		}
 
+		private List<string> _inputStrings = new List<string> { "123", "-45", "1,543", "(46)", "123.5", "", "hi" };
+
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
-			int result;
+			int intResult;
 
-			var inputString = new List<string> { "123", "-45", "1,543", "123.5", "(46)", "", "hi" };
-
-			foreach (var input in inputString)
+			foreach (var input in _inputStrings)
 			{
-				try
+				if (Int32.TryParse(input, System.Globalization.NumberStyles.Any, null, out intResult))
 				{
-					result = Convert.ToInt32(input);
-					OutputTextBox.Text += $"{input}: converted to {input}\r\n";
-				} catch (Exception)
+					OutputTextBox.Text += $"{input}: converted to {intResult}\r\n";
+				}
+				else
+
 				{
-					result = 0;
-					OutputTextBox.Text += $"Cannot convert \"{input}\" to an Int32.\r\n";
+					OutputTextBox.Text += $"Cannot parse {input}: to Int32\r\n";
 				}
 			}
 		}
 
 		private void ButtonB_Click(object sender, RoutedEventArgs e) {
-			double result;
+			double doubleResult;
 
-			var inputString = new List<string> { "123", "-45", "1,543", "123.5", "(46)", "", "hi" };
-
-			foreach (var input in inputString)
+			foreach (var input in _inputStrings)
 			{
-				try
+				if (Double.TryParse(input, System.Globalization.NumberStyles.Any, null, out doubleResult))
 				{
-					result = Convert.ToDouble(input);
-					OutputTextBox.Text += $"{input}: converted to {input}\r\n";
-				} catch (Exception)
+					OutputTextBox.Text += $"{input}: converted to {doubleResult}\r\n";
+				}
+				else
+
 				{
-					result = 0;
-					OutputTextBox.Text += $"Cannot convert \"{input}\" to an Double.\r\n";
+					OutputTextBox.Text += $"Cannot parse {input}: to Double\r\n";
 				}
 			}
 		}
 
 		private void ButtonC_Click(object sender, RoutedEventArgs e) {
-			int result;
-
-			var inputString = new List<string> { "123", "-45", "1,543", "123.5", "(46)", "", "hi" };
-
-			foreach (var input in inputString)
+			var _inputStrings = new List<string> { "5/5/1925", "4/5", "July 21, 2002", "46", "January", "4:32:10", "4-4-44" };
+			DateTime dateResult;
+			foreach (var input in _inputStrings)
 			{
-				try
+				if (DateTime.TryParse(input,  null, System.Globalization.DateTimeStyles.AllowInnerWhite, out dateResult))
 				{
-					result = Int32.Parse(input, System.Globalization.NumberStyles.Any);
-					OutputTextBox.Text += $"{input}: converted to {input}\r\n";
-				} catch (Exception)
+					OutputTextBox.Text += $"{input}: converted to {dateResult}\r\n";
+				}
+				else
+
 				{
-					result = 0;
-					OutputTextBox.Text += $"Cannot convert \"{input}\" to an Int32.\r\n";
+					OutputTextBox.Text += $"Cannot parse {input}: to DateTime\r\n";
 				}
 			}
 		}
