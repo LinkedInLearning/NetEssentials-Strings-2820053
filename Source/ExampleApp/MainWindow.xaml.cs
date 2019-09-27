@@ -34,7 +34,8 @@ namespace ExampleApp
 			var culture1 = new System.Globalization.CultureInfo("en-US");
 			var culture2 = new System.Globalization.CultureInfo("fr-BE");
 			var culture3 = new System.Globalization.CultureInfo("zh-SG");
-
+		
+	
 			OutputTextBox1.Text += $"Culture ID: {culture1.Name}\r\n";
 			OutputTextBox2.Text += $"Culture ID: {culture2.Name}\r\n";
 			OutputTextBox3.Text += $"Culture ID: {culture3.Name}\r\n";
@@ -55,9 +56,9 @@ namespace ExampleApp
 			OutputTextBox2.Text += $"Native Calendar: {culture2.DateTimeFormat.NativeCalendarName}\r\n";
 			OutputTextBox3.Text += $"Native Calendar: {culture3.DateTimeFormat.NativeCalendarName}\r\n";
 
-			OutputTextBox1.Text += $"Month Day Pattern: {culture1.DateTimeFormat.LongDatePattern  }\r\n";
-			OutputTextBox2.Text += $"Month Day Pattern: {culture2.DateTimeFormat.LongDatePattern}\r\n";
-			OutputTextBox3.Text += $"Month Day Pattern: {culture3.DateTimeFormat.LongDatePattern}\r\n";
+			OutputTextBox1.Text += $"LongDate Pattern: {culture1.DateTimeFormat.LongDatePattern  }\r\n";
+			OutputTextBox2.Text += $"LongDate Pattern: {culture2.DateTimeFormat.LongDatePattern}\r\n";
+			OutputTextBox3.Text += $"LongDate Pattern: {culture3.DateTimeFormat.LongDatePattern}\r\n";
 
 			
 
