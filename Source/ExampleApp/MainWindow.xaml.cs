@@ -25,7 +25,11 @@ namespace ExampleApp {
 			// the == operator always uses ordinal comparison
 			var areEqual = firstWord == secondWord;
 
-			// Ordinal is the fastest way to compare two strings.
+			// static version
+			// with explicit StringComparison.Ordinal
+			areEqual = String.Equals(firstWord, secondWord, StringComparison.Ordinal);
+
+			// use the instance method
 			areEqual = firstWord.Equals(secondWord);
 			// Use the overload that specifies a StringComparison.
 			areEqual = firstWord.Equals(secondWord, StringComparison.Ordinal);
@@ -33,9 +37,21 @@ namespace ExampleApp {
 			// ignore case, but still do ordinal compare
 			areEqual = firstWord.Equals(secondWord, StringComparison.OrdinalIgnoreCase);
 
-			//static version
-			areEqual = String.Equals(firstWord, secondWord, StringComparison.Ordinal);
+		
 		}
+		private void ButtonB_Click(object sender, RoutedEventArgs e)
+		{
+			if (String.Equals(PasswordBox1.Password, "secret", StringComparison.Ordinal))
+			{
+				OutputTextBox.Text += $"Login Success\r\n";
+			}
+			else
+			{
+				OutputTextBox.Text += $"Login Failed\r\n";
+			}
+		}
+
+
 		public void ExampleSlideCode() {
 			bool areEqual;
 
@@ -79,16 +95,7 @@ namespace ExampleApp {
 			Console.WriteLine(areEqual);
 		}
 
-		private void ButtonB_Click(object sender, RoutedEventArgs e) {
-			if (String.Equals(PasswordBox1.Password, "secret", StringComparison.Ordinal))
-			{
-				OutputTextBox.Text += $"Login Success\r\n";
-			}
-			else
-			{
-				OutputTextBox.Text += $"Login Failed\r\n";
-			}
-		}
+		
 	}
 
 	public class Methods {
