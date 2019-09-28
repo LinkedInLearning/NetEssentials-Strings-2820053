@@ -36,7 +36,7 @@ namespace ExampleApp {
 			} catch (Exception ex)
 			{
 
-				OutputToScreen(ex.Message);
+				OutputToScreen($"{ex.Message} {ex.InnerException.Message}");
 			}
 			
 		}
