@@ -20,11 +20,11 @@ namespace ExampleApp {
 
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
-			decimal saleAmount = 36450.89M;
-			OutputTextBox1.Text += $"{_ciUS.EnglishName}:\t\t{saleAmount.ToString("C", _ciUS)}\r\n";
-			OutputTextBox1.Text += $"{_ciDE.EnglishName}:\t\t{saleAmount.ToString("C", _ciDE)}\r\n";
-			OutputTextBox1.Text += $"{_ciBN.EnglishName}:\t\t\t{saleAmount.ToString("C", _ciBN)}\r\n";
-			OutputTextBox1.Text += $"{_ciCN.EnglishName}:\t\t{saleAmount.ToString("C", _ciCN)}\r\n";
+			decimal amount = 36450.89M;
+			OutputTextBox1.Text += $"{_ciUS.EnglishName}:\t\t{amount.ToString("C", _ciUS)}\r\n";
+			OutputTextBox1.Text += $"{_ciDE.EnglishName}:\t\t{amount.ToString("C", _ciDE)}\r\n";
+			OutputTextBox1.Text += $"{_ciBN.EnglishName}:\t\t\t{amount.ToString("C", _ciBN)}\r\n";
+			OutputTextBox1.Text += $"{_ciCN.EnglishName}:\t\t{amount.ToString("C", _ciCN)}\r\n";
 		}
 
 		private void ButtonB_Click(object sender, RoutedEventArgs e) {
