@@ -33,10 +33,15 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Button A" />
+							Content="Need IComparable"
+							Click='ButtonA_Click' />
 			<Button x:Name="ButtonB"
-							Content="Button B" />
-			<Button x:Name="ClearButton"
+							Content="Sort Array"
+							Click='ButtonB_Click' />
+			<Button x:Name="ButtonC"
+							Content="Sort with Culture"
+							Click='ButtonC_Click' />
+				<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />
 		</StackPanel>
