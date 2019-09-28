@@ -3,27 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 
-namespace ExampleApp {
+namespace ExampleApp
+{
 
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window {
+	public partial class MainWindow : Window
+	{
 
-		public MainWindow() {
+		public MainWindow()
+		{
 			InitializeComponent();
 		}
 
-		private void ClearButton_Click(object sender, RoutedEventArgs e) {
+		private void ClearButton_Click(object sender, RoutedEventArgs e)
+		{
 			OutputTextBox.Text = string.Empty;
 		}
 
-		private void ButtonA_Click(object sender, RoutedEventArgs e) {
+		private void ButtonA_Click(object sender, RoutedEventArgs e)
+		{
 			var firstWord = "aabb";
 			var secondWord = "aaBb";
-
+			bool areEqual;
 			// the == operator always uses ordinal comparison
-			var areEqual = firstWord == secondWord;
+			areEqual = firstWord == secondWord;
 
 			// static version
 			// with explicit StringComparison.Ordinal
@@ -37,7 +42,7 @@ namespace ExampleApp {
 			// ignore case, but still do ordinal compare
 			areEqual = firstWord.Equals(secondWord, StringComparison.OrdinalIgnoreCase);
 
-		
+
 		}
 		private void ButtonB_Click(object sender, RoutedEventArgs e)
 		{
@@ -52,7 +57,8 @@ namespace ExampleApp {
 		}
 
 
-		public void ExampleSlideCode() {
+		public void ExampleSlideCode()
+		{
 			bool areEqual;
 
 			areEqual = String.Equals("banana", "Banana");
@@ -95,17 +101,20 @@ namespace ExampleApp {
 			Console.WriteLine(areEqual);
 		}
 
-		
+
 	}
 
-	public class Methods {
+	public class Methods
+	{
 		// System.String class
 
-		public static bool Equals(string a, string b) {
+		public static bool Equals(string a, string b)
+		{
 			return true;
 		}
 
-		public static int Compare(string a, string b) {
+		public static int Compare(string a, string b)
+		{
 			a = "";
 			b = "";
 			return 0;
