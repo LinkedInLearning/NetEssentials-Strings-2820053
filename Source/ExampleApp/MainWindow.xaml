@@ -38,10 +38,6 @@
 			<Button x:Name="ButtonB"
 							Content="DateTime"
 							Click='ButtonB_Click' />
-			<Button x:Name="ButtonC"
-							Content="TimeSpan" />
-			<Button x:Name="ButtonD"
-							Content="Update Inputs" />
 			<Button x:Name="ClearButton"
 							Content="Clear"
 							Click='ClearButton_Click' />
@@ -69,7 +65,7 @@
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width='1*' />
 				<ColumnDefinition Width='1*' />
-				<ColumnDefinition Width='1*' />
+			
 			</Grid.ColumnDefinitions>
 			<TextBox x:Name="OutputTextBox1"
 							 HorizontalAlignment="Stretch"
@@ -90,16 +86,6 @@
 							 VerticalAlignment="Stretch"
 							 IsReadOnly="True"
 							 Grid.Column='1'
-							 VerticalScrollBarVisibility='Visible' />
-			<TextBox x:Name="OutputTextBox3"
-							 MinWidth='140'
-							 HorizontalAlignment="Stretch"
-							 Margin="10"
-							 TextWrapping="Wrap"
-							 Text=""
-							 VerticalAlignment="Stretch"
-							 IsReadOnly="True"
-							 Grid.Column='2'
 							 VerticalScrollBarVisibility='Visible' />
 		</Grid>
 	</DockPanel>
