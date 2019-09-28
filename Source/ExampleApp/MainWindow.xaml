@@ -51,15 +51,10 @@
 							 HorizontalAlignment="Stretch"
 							 MinWidth='200'
 							 Margin='10,0'
-							 Text="21,654.75"
+							 Text=""
 							 VerticalAlignment="Stretch" />
-			<TextBlock Text='Parse This (DE):' />
-			<TextBox x:Name="InputTextBoxDE"
-							 HorizontalAlignment="Stretch"
-							 MinWidth='200'
-							 Margin='10,0'
-							 Text="42.575,12"
-							 VerticalAlignment="Stretch" />
+		
+			
 		</StackPanel>
 		<Grid DockPanel.Dock='Top' >
 			<Grid.ColumnDefinitions>
