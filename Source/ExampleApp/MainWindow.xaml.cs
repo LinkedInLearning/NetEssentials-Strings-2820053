@@ -69,11 +69,7 @@ namespace ExampleApp {
 
 			result = string.Compare("banana", "bAnAnA", StringComparison.CurrentCulture);
 			OutputToScreen($"Culture: (banana) compared to (bAnAnA) is {result}");
-			result = string.Compare("banana", "bAnAnA", StringComparison.Ordinal);
-			OutputToScreen($"Ordinal: (banana) compared to (bAnAnA) is {result}");
-
-			result = string.Compare("banana", "breadFruit", StringComparison.Ordinal);
-			OutputToScreen($"Ordinal: (banana) compared to (breadFruit) is {result}");
+		
 		}
 
 		private void OutputToScreen(string message) {
