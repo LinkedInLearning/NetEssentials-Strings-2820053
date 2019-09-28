@@ -13,40 +13,40 @@ namespace ExampleApp {
 			InitializeComponent();
 		}
 
-		private CultureInfo _cultureUS = new CultureInfo("en-US");
-		private CultureInfo _cultureDE = new CultureInfo("de-DE");
-		private CultureInfo _cultureBN = new CultureInfo("bn-IN");
-		private CultureInfo _cultureSG = new CultureInfo("zh-CN");
+		private CultureInfo _ciUS = new CultureInfo("en-US");
+		private CultureInfo _ciDE = new CultureInfo("de-DE");
+		private CultureInfo _ciBN = new CultureInfo("bn-IN");
+		private CultureInfo _ciCN = new CultureInfo("zh-CN");
 
 
 		private void ButtonA_Click(object sender, RoutedEventArgs e) {
 			decimal saleAmount = 36450.89M;
-			OutputTextBox1.Text += $"{_cultureUS.EnglishName}:\t\t{saleAmount.ToString("C", _cultureUS)}\r\n";
-			OutputTextBox1.Text += $"{_cultureDE.EnglishName}:\t\t{saleAmount.ToString("C", _cultureDE)}\r\n";
-			OutputTextBox1.Text += $"{_cultureBN.EnglishName}:\t\t\t{saleAmount.ToString("C", _cultureBN)}\r\n";
-			OutputTextBox1.Text += $"{_cultureSG.EnglishName}:\t\t{saleAmount.ToString("C", _cultureSG)}\r\n";
+			OutputTextBox1.Text += $"{_ciUS.EnglishName}:\t\t{saleAmount.ToString("C", _ciUS)}\r\n";
+			OutputTextBox1.Text += $"{_ciDE.EnglishName}:\t\t{saleAmount.ToString("C", _ciDE)}\r\n";
+			OutputTextBox1.Text += $"{_ciBN.EnglishName}:\t\t\t{saleAmount.ToString("C", _ciBN)}\r\n";
+			OutputTextBox1.Text += $"{_ciCN.EnglishName}:\t\t{saleAmount.ToString("C", _ciCN)}\r\n";
 		}
 
 		private void ButtonB_Click(object sender, RoutedEventArgs e) {
-			DateTime saleDate = DateTime.Parse("7/21/2002 13:15:58", _cultureUS);
+			DateTime saleDate = DateTime.Parse("7/21/2002 13:15:58", _ciUS);
 
-			OutputTextBox2.Text += $"{_cultureUS.EnglishName}:\t{saleDate.ToString("D", _cultureUS)}\r\n";
-			OutputTextBox2.Text += $"{_cultureDE.EnglishName}:\t{saleDate.ToString("D", _cultureDE)}\r\n";
-			OutputTextBox2.Text += $"{_cultureBN.EnglishName}:\t\t{saleDate.ToString("D", _cultureBN)}\r\n";
-			OutputTextBox2.Text += $"{_cultureSG.EnglishName}:\t{saleDate.ToString("D", _cultureSG)}\r\n";
-
-			OutputTextBox2.Text += $"--------------\r\n";
-
-			OutputTextBox2.Text += $"{_cultureUS.EnglishName}:\t{saleDate.ToString("d", _cultureUS)}\r\n";
-			OutputTextBox2.Text += $"{_cultureDE.EnglishName}:\t{saleDate.ToString("d", _cultureDE)}\r\n";
-			OutputTextBox2.Text += $"{_cultureBN.EnglishName}:\t\t{saleDate.ToString("d", _cultureBN)}\r\n";
-			OutputTextBox2.Text += $"{_cultureSG.EnglishName}:\t{saleDate.ToString("d", _cultureSG)}\r\n";
+			OutputTextBox2.Text += $"{_ciUS.EnglishName}:\t{saleDate.ToString("D", _ciUS)}\r\n";
+			OutputTextBox2.Text += $"{_ciDE.EnglishName}:\t{saleDate.ToString("D", _ciDE)}\r\n";
+			OutputTextBox2.Text += $"{_ciBN.EnglishName}:\t\t{saleDate.ToString("D", _ciBN)}\r\n";
+			OutputTextBox2.Text += $"{_ciCN.EnglishName}:\t{saleDate.ToString("D", _ciCN)}\r\n";
 
 			OutputTextBox2.Text += $"--------------\r\n";
-			OutputTextBox2.Text += $"{_cultureUS.EnglishName}:\t{saleDate.ToString("T", _cultureUS)}\r\n";
-			OutputTextBox2.Text += $"{_cultureDE.EnglishName}:\t{saleDate.ToString("T", _cultureDE)}\r\n";
-			OutputTextBox2.Text += $"{_cultureBN.EnglishName}:\t\t{saleDate.ToString("T", _cultureBN)}\r\n";
-			OutputTextBox2.Text += $"{_cultureSG.EnglishName}:\t{saleDate.ToString("T", _cultureSG)}\r\n";
+
+			OutputTextBox2.Text += $"{_ciUS.EnglishName}:\t{saleDate.ToString("d", _ciUS)}\r\n";
+			OutputTextBox2.Text += $"{_ciDE.EnglishName}:\t{saleDate.ToString("d", _ciDE)}\r\n";
+			OutputTextBox2.Text += $"{_ciBN.EnglishName}:\t\t{saleDate.ToString("d", _ciBN)}\r\n";
+			OutputTextBox2.Text += $"{_ciCN.EnglishName}:\t{saleDate.ToString("d", _ciCN)}\r\n";
+
+			OutputTextBox2.Text += $"--------------\r\n";
+			OutputTextBox2.Text += $"{_ciUS.EnglishName}:\t{saleDate.ToString("T", _ciUS)}\r\n";
+			OutputTextBox2.Text += $"{_ciDE.EnglishName}:\t{saleDate.ToString("T", _ciDE)}\r\n";
+			OutputTextBox2.Text += $"{_ciBN.EnglishName}:\t\t{saleDate.ToString("T", _ciBN)}\r\n";
+			OutputTextBox2.Text += $"{_ciCN.EnglishName}:\t{saleDate.ToString("T", _ciCN)}\r\n";
 		}
 
 	
