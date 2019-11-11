@@ -36,7 +36,7 @@ namespace ExampleApp {
 
 
 			var foodArray = foods.Split(comma, StringSplitOptions.RemoveEmptyEntries);
-
+			var countQuery = foodArray.GroupBy(x => x).Where(x => x.Count() > 1);
 			foreach (var food in foodArray)
 			{
 				OutputTextBox.Text += $"{food}\r\n";
