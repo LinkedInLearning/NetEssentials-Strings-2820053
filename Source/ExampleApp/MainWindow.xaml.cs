@@ -32,7 +32,7 @@ namespace ExampleApp
 			string s1 = String.Empty;
 			string s2 = "";
 			string s3 = "pear";
-		
+			s1 = new string('=', 240);	
 			OutputTextBox.Text = s1;
 		}
 
@@ -41,6 +41,7 @@ namespace ExampleApp
 			var db = new GroceryDb();
 			string s2 = string.Empty;
 
+			s2 = new String(db.GetFruits());
 
 			OutputTextBox.Text = s2;
 		}
@@ -49,7 +50,7 @@ namespace ExampleApp
 		{
 			var db = new GroceryDb();
 			string s3 = String.Empty;
-
+			s3 = new String(db.GetFruits(),7,3);
 			OutputTextBox.Text = s3;
 
 		}
