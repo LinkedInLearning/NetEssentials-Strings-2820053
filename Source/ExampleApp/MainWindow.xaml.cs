@@ -70,13 +70,13 @@ namespace ExampleApp
 			// "P" or "p"	Percent
 			// "X" or "x"	Hexadecimal
 
-			double currentValue = Double.Parse(InputTextBox.Text);
+			int currentValue = int.Parse(InputTextBox.Text);
 			string formatter = FormatterTextBox.Text;
 			try
 			{
-				string formattedString = currentValue.ToString("E");
+				//string formattedString = currentValue.ToString("E");
 
-				formattedString = currentValue.ToString($"{ formatter}");
+				string formattedString = currentValue.ToString($"{ formatter}");
 				OutputToScreen(formattedString);
 			} catch (Exception ex)
 			{
