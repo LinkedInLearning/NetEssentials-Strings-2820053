@@ -39,7 +39,7 @@ namespace ExampleApp
 
 			string header = "Format these numbers as percent: ";
 			string combo = string.Empty;
-			combo = String.Format("{0}{1:P}, {2:P}", header, num1, num2);
+			combo = $"{header}{num1:P}, {num2:P}";
 
 			OutputTextBox.Text = combo;
 
