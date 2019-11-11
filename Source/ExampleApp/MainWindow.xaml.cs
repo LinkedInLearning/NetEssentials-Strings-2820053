@@ -13,15 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExampleApp
-{
+namespace ExampleApp {
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
-	{
-		public MainWindow()
+	public partial class MainWindow : Window 
 		{
+		public MainWindow() 
+			{
 			InitializeComponent();
 		}
 
@@ -30,8 +29,7 @@ namespace ExampleApp
 			OutputTextBox.Text = string.Empty;
 		}
 
-		private void ButtonA_Click(object sender, RoutedEventArgs e)
-		{
+		private void ButtonA_Click(object sender, RoutedEventArgs e) {
 			string foods = "kiwi, lemon, kiwi, onion, potato, lemon, spinach, tomato, lemon, onion";
 			OutputTextBox.Text += foods + "\r\n";
 			string[] comma = { ", " };
@@ -39,11 +37,14 @@ namespace ExampleApp
 
 			var foodArray = foods.Split(comma, StringSplitOptions.RemoveEmptyEntries);
 
+			foreach (var food in foodArray)
+			{
+				OutputTextBox.Text += $"{food}\r\n";
+			}
 
 		}
 
-		private void ButtonB_Click(object sender, RoutedEventArgs e)
-		{
+		private void ButtonB_Click(object sender, RoutedEventArgs e) {
 
 			string statusCodes = "#kr032,#rt887,#kr932,#wt187,#aa321,#bb872,#dm554";
 			OutputTextBox.Text += statusCodes + "\r\n";

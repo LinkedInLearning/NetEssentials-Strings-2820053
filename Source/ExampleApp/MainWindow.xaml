@@ -33,10 +33,10 @@
 								DockPanel.Dock="Bottom"
 								HorizontalAlignment="Center">
 			<Button x:Name="ButtonA"
-							Content="Button A"
+							Content="LINQ - Group and Count"
 							Click='ButtonA_Click' />
 			<Button x:Name="ButtonB"
-							Content="Button B"
+							Content="LINQ - Where"
 							Click='ButtonB_Click' />
 			<Button x:Name="ClearButton"
 							Content="Clear"
