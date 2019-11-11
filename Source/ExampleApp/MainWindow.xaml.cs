@@ -43,7 +43,7 @@ namespace ExampleApp
 
 			OutputTextBox.Text += $"s1 (default): {s1}\r\n";
 			OutputTextBox.Text += $"s2 (se-SV): {s2}\r\n";
-			OutputTextBox.Text += $"s3 (de-DE): {s2}\r\n";
+			OutputTextBox.Text += $"s3 (de-DE): {s3}\r\n";
 
 		}
 
