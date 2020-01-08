@@ -1,6 +1,6 @@
 # .NET Essentials - Strings
 
-This is the repository for the **LinkedIn Learning**  [.NET Essentials - Strings](#) course. The full course is available from [LinkedIn Learning](https://linkedin.com/learning/).#
+This is the repository for the **LinkedIn Learning**  [.NET Essentials - Strings](https://www.linkedin.com/learning/c-sharp-string-essential-training/use-linq-to-query-string-array?u=104) course. The full course is available from [LinkedIn Learning](https://linkedin.com/learning/).#
 
 *Course Name and ID: NetEssentials-Strings-2820053* 
 ## .NET Essentials
