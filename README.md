@@ -9,6 +9,17 @@ Our .NET Essentials courses dig deep into a sub-section of .NET, given you a lon
 ## String
 In the world of software development, a string is a series of characters. And regardless of which programming language you're using, it's one of the most important data types you'll be working with. In this course, Walt Ritscher takes a focused look at how to work with the string class in the .NET framework. Walt reviews how to manipulate string content, parse strings, format numeric and date types, and more. Plus, he considers how cultural differences impact strings and shows how to work with the CultureInfo class.
 
+#### Learning objectives
+  - Declaring and initializing a string variable
+  - Getting a char from a string
+  - Using char methods to analyze Unicode data
+  - Three ways to work with string literals
+  - Composing strings
+  - Splitting strings into an array
+  - How custom types format and parse strings
+  - Formatting numeric and date types
+  - Comparing and sorting
+
 # Branches
 The branches are structured to correspond to the videos in the course. The naming convention is `chapter#-video#`. As an example, the branch named `02-03` corresponds to the second chapter and the third video in that chapter.
 Some branches will have a beginning state (`04-01`) and an end state (`04-01e`). The end state videos use `e` for "end" and contains the code as it is at the end of the video. The `master` branch holds the the initial state of the course and is not used for exercises during the course.
