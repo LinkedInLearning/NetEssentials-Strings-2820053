@@ -7,7 +7,7 @@ This is the repository for the **LinkedIn Learning**  [.NET Essentials - Strings
 .NET is a mature programming framework used around the world to build applications for every type of project.
 Our .NET Essentials courses dig deep into a sub-section of .NET, given you a long look at one segment of this ubiquitous framework.
 ## String
-More about this course here.
+In the world of software development, a string is a series of characters. And regardless of which programming language you're using, it's one of the most important data types you'll be working with. In this course, Walt Ritscher takes a focused look at how to work with the string class in the .NET framework. Walt reviews how to manipulate string content, parse strings, format numeric and date types, and more. Plus, he considers how cultural differences impact strings and shows how to work with the CultureInfo class.
 
 # Branches
 The branches are structured to correspond to the videos in the course. The naming convention is `chapter#-video#`. As an example, the branch named `02-03` corresponds to the second chapter and the third video in that chapter.
