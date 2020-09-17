@@ -26,12 +26,15 @@ Some branches will have a beginning state (`04-01`) and an end state (`04-01e`).
 ## Installing  
 To use these exercise files, follow the instructions in the course to learn how to work with GitHub content.
 For this course the instructor uses Visual Studio 2019, any edition is sufficient (Community, Professional, Enterprise).  
-![Advanced C#: Thread-Safe Data with Concurrent Collections][lil-thumbnail-url] 
+
 ## About our .NET courses
 When you are ready to [learn more about .NET](https://www.linkedin.com/learning/search?entityType=COURSE&keywords=.net) or [Visual Studio](https://www.linkedin.com/learning/search?entityType=COURSE&keywords=visual%20studio), **LinkedIn Learning** has what you need. 
 
 ## About the Instructor - Walt Ritscher
 Check out my [other courses](https://www.linkedin.com/learning/instructors/walt-ritscher) on LinkedIn Learning.  Follow me on [LinkedIn](https://www.linkedin.com/in/waltritscher/?trk=lil_course) and [Twitter](https://twitter.com/waltritscher). 
+
+
+![Advanced C#: Thread-Safe Data with Concurrent Collections][lil-thumbnail-url] 
 
 [lil-course-url]: https://www.linkedin.com/learning/c-sharp-string-essential-training/
 [lil-thumbnail-url]: https://cdn.lynda.com/course/2820053/2820053-1573679518051-16x9.jpg
